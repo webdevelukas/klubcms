@@ -2,22 +2,34 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
+// Basic styling for all buttons (default / active)
 const StyledButton = styled.button`
+  display: flex;
+  align-items: center;
   background: ${props =>
     props.active ? props.theme.highlightContrast : props.theme.highlight};
   box-shadow: ${props =>
       props.active ? props.theme.highlight : props.theme.highlightContrast}
     3px 3px 0;
-  border: none;
   color: ${props =>
     props.active ? props.theme.highlight : props.theme.highlightContrast};
   padding: 0 0.8em;
+  fill: ${props =>
+    props.active ? props.theme.highlight : props.theme.highlightContrast};
 `;
 
-export default function Button({ children, onClick, active }) {
+// Styling for buttons with an icon on the left
+export const DefaultWithIcon = styled(Button)`
+  padding: 0 0.8em 0 0.3em;
+`;
+
+// Styling for Square buttons with a big icon above the text
+export const SquareWithIcon = styled(Button)``;
+
+export default function Button({ children, onClick, active, className }) {
   return (
-    <StyledButton onClick={onClick} active={active}>
-      Test
+    <StyledButton onClick={onClick} active={active} className={className}>
+      {children}
     </StyledButton>
   );
 }
@@ -25,5 +37,6 @@ export default function Button({ children, onClick, active }) {
 Button.propTypes = {
   children: PropTypes.node,
   onClick: PropTypes.func,
-  active: PropTypes.bool
+  active: PropTypes.bool,
+  className: PropTypes.any
 };

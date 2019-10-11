@@ -1,5 +1,6 @@
 import React from "react";
-import Button from "../components/Button";
+import Button, { DefaultWithIcon } from "../components/Button";
+import ArrowDropDown from "../icons/ArrowDropDown";
 
 export default {
   title: "Button"
@@ -7,8 +8,13 @@ export default {
 
 export const Default = () => <Button>Save article</Button>;
 
-export const DefaultWithIcon = () => <Button>Save article</Button>;
+export const Dropdown = () => (
+  <DefaultWithIcon>
+    <ArrowDropDown />
+    Save article
+  </DefaultWithIcon>
+);
 
 export const Active = () => <Button active>Save article</Button>;
 
-export const SquareWithIcon = () => <Button active>Save article</Button>;
+export const SquareDefaultWithIcon = () => <Button>Save article</Button>;

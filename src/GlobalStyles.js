@@ -19,5 +19,6 @@ button {
   font-family: 'Cairo', sans-serif;
   font-weight: 700;
   font-size: 16px;
+  border: none;
 }
 `;
