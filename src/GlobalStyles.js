@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
+
 *,
 *:before,
 *:after {
@@ -8,9 +9,15 @@ export default createGlobalStyle`
 }
 
 body {
-  font-family: 'Cairo', sans-serif;
   font-size: 16px;
-  font-weight: 400;
   background: #E1E1E1;
+  font-family: 'Cairo', sans-serif;
+  font-weight: 400;
+}
+
+button {
+  font-family: 'Cairo', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
 }
 `;

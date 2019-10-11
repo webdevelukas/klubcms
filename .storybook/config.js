@@ -8,9 +8,11 @@ import defaultTheme from "../src/themes/default";
 configure(require.context("../src/stories", true, /\.stories\.js$/), module);
 
 const GlobalStyleDecorator = storyFn => (
-  <ThemeProvider theme={defaultTheme} style="background:#CCC">
-    <GlobalStyles />
-    {storyFn()}
+  <ThemeProvider theme={defaultTheme}>
+    <>
+      <GlobalStyles />
+      {storyFn()}
+    </>
   </ThemeProvider>
 );
 addDecorator(GlobalStyleDecorator);
