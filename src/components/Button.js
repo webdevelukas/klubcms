@@ -21,10 +21,25 @@ const StyledButton = styled.button`
 // Styling for buttons with an icon on the left
 export const DefaultWithIcon = styled(Button)`
   padding: 0 0.8em 0 0.3em;
+
+  svg {
+    width: 24px;
+    height: 24px;
+  }
 `;
 
 // Styling for Square buttons with a big icon above the text
-export const SquareWithIcon = styled(Button)``;
+export const SquareWithIcon = styled(Button)`
+  flex-direction: column;
+  width: 100px;
+  height: 100px;
+  padding: 0.6em;
+
+  svg {
+    width: 60px;
+    height: 60px;
+  }
+`;
 
 export default function Button({ children, onClick, active, className }) {
   return (
