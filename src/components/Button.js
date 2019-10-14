@@ -16,10 +16,11 @@ const StyledButton = styled.button`
   padding: 0 0.8em;
   fill: ${props =>
     props.active ? props.theme.highlight : props.theme.highlightContrast};
+  font-weight: 700;
 `;
 
 // Styling for buttons with an icon on the left
-export const DefaultWithIcon = styled(Button)`
+export const ButtonWithIcon = styled(Button)`
   padding: 0 0.8em 0 0.3em;
 
   svg {
@@ -29,7 +30,7 @@ export const DefaultWithIcon = styled(Button)`
 `;
 
 // Styling for Square buttons with a big icon above the text
-export const SquareWithIcon = styled(Button)`
+export const SquareButtonWithIcon = styled(Button)`
   flex-direction: column;
   width: 100px;
   height: 100px;
