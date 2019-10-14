@@ -1,5 +1,8 @@
 import React from "react";
-import Button, { DefaultWithIcon, SquareWithIcon } from "../components/Button";
+import Button, {
+  ButtonWithIcon,
+  SquareButtonWithIcon
+} from "../components/Button";
 import ArrowDropDown from "../icons/ArrowDropDown";
 import NewsPaper from "../icons/NewsPaper";
 import Text from "../icons/Text";
@@ -14,29 +17,29 @@ export const Default = () => <Button>Save article</Button>;
 export const Active = () => <Button active>Save article</Button>;
 
 export const Dropdown = () => (
-  <DefaultWithIcon>
+  <ButtonWithIcon>
     <ArrowDropDown />
     Save article
-  </DefaultWithIcon>
+  </ButtonWithIcon>
 );
 
 export const SquareNewsPaper = () => (
-  <SquareWithIcon>
+  <SquareButtonWithIcon>
     <NewsPaper />
     Add Article
-  </SquareWithIcon>
+  </SquareButtonWithIcon>
 );
 
 export const SquareTextActive = () => (
-  <SquareWithIcon active>
+  <SquareButtonWithIcon active>
     <Text />
     Add Text
-  </SquareWithIcon>
+  </SquareButtonWithIcon>
 );
 
 export const SquarePhotos = () => (
-  <SquareWithIcon>
+  <SquareButtonWithIcon>
     <AddPhotos />
     Add Photos
-  </SquareWithIcon>
+  </SquareButtonWithIcon>
 );
