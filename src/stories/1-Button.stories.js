@@ -3,10 +3,10 @@ import Button, {
   ButtonWithIcon,
   SquareButtonWithIcon
 } from "../components/Button";
-import ArrowDropDown from "../icons/ArrowDropDown";
-import NewsPaper from "../icons/NewsPaper";
-import Text from "../icons/Text";
-import AddPhotos from "../icons/AddPhotos";
+import ArrowDropDownIcon from "../icons/ArrowDropDownIcon";
+import NewspaperIcon from "../icons/NewspaperIcon";
+import TextIcon from "../icons/TextIcon";
+import AddPhotosIcon from "../icons/AddPhotosIcon";
 
 export default {
   title: "Button"
@@ -18,28 +18,28 @@ export const Active = () => <Button active>Save article</Button>;
 
 export const Dropdown = () => (
   <ButtonWithIcon>
-    <ArrowDropDown />
+    <ArrowDropDownIcon />
     Save article
   </ButtonWithIcon>
 );
 
 export const SquareNewsPaper = () => (
   <SquareButtonWithIcon>
-    <NewsPaper />
+    <NewspaperIcon />
     Add Article
   </SquareButtonWithIcon>
 );
 
 export const SquareTextActive = () => (
   <SquareButtonWithIcon active>
-    <Text />
+    <TextIcon />
     Add Text
   </SquareButtonWithIcon>
 );
 
 export const SquarePhotos = () => (
   <SquareButtonWithIcon>
-    <AddPhotos />
+    <AddPhotosIcon />
     Add Photos
   </SquareButtonWithIcon>
 );

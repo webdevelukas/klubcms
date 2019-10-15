@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Text() {
+export default function TextIcon() {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
       <g transform="translate(-66 -675)">
