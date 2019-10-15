@@ -3,13 +3,13 @@ import UserImage from "../components/UserImage";
 
 import imageFile from "../sample-data/userImage.jpg";
 
-export default {
-  title: "UserImage"
-};
-
 const image = {
   src: imageFile,
   alt: "A Face looking into camera"
+};
+
+export default {
+  title: "UserImage"
 };
 
 export const Default = () => <UserImage src={image.src} alt={image.alt} />;

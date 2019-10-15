@@ -14,10 +14,6 @@ html {
   font-weight: 400;
 }
 
-body {
-  background: #E1E1E1;
-}
-
 button, input, select, textarea {
   font-family : inherit;
   font-size: 1rem;
