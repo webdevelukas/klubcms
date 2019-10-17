@@ -2,6 +2,7 @@ import React from "react";
 import MenuBar from "../components/MenuBar";
 import MenuList from "../components/MenuList";
 import MenuListItem from "../components/MenuListItem";
+import Menu from "../components/Menu";
 
 export default {
   title: "Menu"
@@ -29,3 +30,5 @@ export const MenuToggled = () => (
     </MenuList>
   </>
 );
+
+export const Functional = () => <Menu />;
