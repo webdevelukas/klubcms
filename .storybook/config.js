@@ -7,17 +7,10 @@ import defaultTheme from "../src/themes/default";
 // automatically import all files ending in *.stories.js
 configure(require.context("../src/stories", true, /\.stories\.js$/), module);
 
-const Main = styled.div`
-  margin: 0;
-  background: #e1e1e1;
-`;
-
 const GlobalStyleDecorator = storyFn => (
   <ThemeProvider theme={defaultTheme}>
-    <Main>
-      <GlobalStyles />
-      {storyFn()}
-    </Main>
+    <GlobalStyles />
+    {storyFn()}
   </ThemeProvider>
 );
 addDecorator(GlobalStyleDecorator);

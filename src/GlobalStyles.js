@@ -16,7 +16,9 @@ html {
 }
 
 body {
-  margin:0;
+  height: 100vh;
+  margin: 0;
+  background: #e1e1e1;
 }
 
 h1 {
