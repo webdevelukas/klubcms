@@ -8,9 +8,7 @@ import defaultTheme from "../src/themes/default";
 configure(require.context("../src/stories", true, /\.stories\.js$/), module);
 
 const Main = styled.div`
-  width: 375px;
-  min-height: 100vh;
-  height: auto;
+  margin: 0;
   background: #e1e1e1;
 `;
 

@@ -15,6 +15,10 @@ html {
   color: ${props => props.theme.main}
 }
 
+body {
+  margin:0;
+}
+
 h1 {
   font-size: 2em;
 }
@@ -33,4 +37,5 @@ button, input, select, textarea {
   font-size: 1rem;
   border: none;
 }
+
 `;
