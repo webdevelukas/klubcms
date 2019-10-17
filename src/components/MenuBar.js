@@ -1,8 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { GoBack, MenuBurger } from "../stories/8-UIElements.stories";
 import { UserImage } from "./Image";
+import MenuBurger from "./MenuBurger";
+import { GoBack } from "../stories/8-UIElements.stories";
 
 const StyledMenuBar = styled.div`
   position: relative;
@@ -22,16 +23,18 @@ const StyledUserImage = styled(UserImage)`
   bottom: -25px;
 `;
 
-export default function MenuBar({ onClick }) {
+export default function MenuBar({ onClick, open, setOpen }) {
   return (
     <StyledMenuBar>
       <GoBack onClick={onClick} />
       <StyledUserImage src="https://images.unsplash.com/photo-1521146764736-56c929d59c83?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80" />
-      <MenuBurger onClick={onClick} />
+      <MenuBurger open={open} setOpen={setOpen} />
     </StyledMenuBar>
   );
 }
 
 MenuBar.propTypes = {
-  onClick: PropTypes.func
+  onClick: PropTypes.func,
+  open: PropTypes.bool.isRequired,
+  setOpen: PropTypes.func.isRequired
 };

@@ -4,10 +4,10 @@ import {
   UIElementIconTop,
   UIElementIconRight
 } from "../components/UIElement";
-import MenuBurgerIcon from "../icons/MenuBurgerIcon";
 import MenuCrossIcon from "../icons/MenuCrossIcon";
 import GoBackIcon from "../icons/GoBackIcon";
 import LogoutPowerIcon from "../icons/LogoutPowerIcon";
+import MenuBurger from "../components/MenuBurger";
 
 export default {
   title: "UI-Elements"
@@ -20,12 +20,7 @@ export const GoBack = () => (
   </UIElementIconLeft>
 );
 
-export const MenuBurger = () => (
-  <UIElementIconTop>
-    <MenuBurgerIcon />
-    menu
-  </UIElementIconTop>
-);
+export const Burger = () => <MenuBurger />;
 
 export const MenuCross = () => (
   <UIElementIconTop>
