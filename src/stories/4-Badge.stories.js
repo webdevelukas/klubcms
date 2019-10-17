@@ -1,15 +1,10 @@
 import React from "react";
-import styled from "styled-components";
 import Badge from "../components/Badge";
+import BadgeList from "../components/BadgeList";
 
 export default {
   title: "Badge"
 };
-
-const FlexContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
 
 export const Default = () => <Badge>1. Mannschaft</Badge>;
 
@@ -22,9 +17,9 @@ export const ListedHorizontal = () => (
 );
 
 export const ListedVertical = () => (
-  <FlexContainer>
+  <BadgeList>
     <Badge>Fussball</Badge>
     <Badge>Herren</Badge>
     <Badge>1. Mannschaft</Badge>
-  </FlexContainer>
+  </BadgeList>
 );
