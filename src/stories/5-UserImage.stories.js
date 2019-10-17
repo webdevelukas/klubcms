@@ -1,5 +1,5 @@
 import React from "react";
-import UserImage from "../components/UserImage";
+import { UserImage } from "../components/Image";
 
 import imageFile from "../sample-data/userImage.jpg";
 
