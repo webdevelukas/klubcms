@@ -17,6 +17,7 @@ const StyledButton = styled.button`
   fill: ${props =>
     props.active ? props.theme.highlight : props.theme.highlightContrast};
   font-weight: 700;
+  cursor: pointer;
 `;
 
 // Styling for buttons with an icon on the left
@@ -29,7 +30,7 @@ export const ButtonWithIcon = styled(Button)`
   }
 `;
 
-// Styling for Square buttons with a big icon above the text
+// Styling for square buttons with a big icon above the text
 export const SquareButtonWithIcon = styled(Button)`
   flex-direction: column;
   width: 100px;
@@ -39,6 +40,21 @@ export const SquareButtonWithIcon = styled(Button)`
   svg {
     width: 60px;
     height: 60px;
+  }
+`;
+
+// Styling for square card buttons with a big icon above the text
+export const SquareCardButtonWithIcon = styled(SquareButtonWithIcon)`
+  grid-area: Button;
+  justify-self: end;
+  align-self: end;
+  width: 66px;
+  height: 66px;
+  font-size: 0.8em;
+
+  svg {
+    width: 32px;
+    height: 32px;
   }
 `;
 
