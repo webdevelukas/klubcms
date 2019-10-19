@@ -2,11 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const StyledGallery = styled.div`
+const StyledGallery = styled.section`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-auto-rows: 13vw;
-  grid-gap: 5px;
+  grid-auto-rows: auto;
+  grid-gap: 3px;
+  padding: 0 3px;
 `;
 
 export default function Gallery({ children }) {

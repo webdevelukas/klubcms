@@ -2,13 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const ImageOverlayContainer = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100%;
-`;
-
 export const StyledImageOverlay = styled.div`
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,9 +18,7 @@ export const StyledImageOverlay = styled.div`
 `;
 
 export default function ImageOverlay({ children, onClick }) {
-  return (
-    <ImageOverlayContainer onClick={onClick}>{children}</ImageOverlayContainer>
-  );
+  return <StyledImageOverlay onClick={onClick}>{children}</StyledImageOverlay>;
 }
 
 ImageOverlay.propTypes = {
