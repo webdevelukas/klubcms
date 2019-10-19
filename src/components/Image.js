@@ -17,6 +17,10 @@ export const UserImage = styled(StyledImage)`
   z-index: 1;
 `;
 
+export const GalleryImage = styled(StyledImage)`
+  position: absolute;
+`;
+
 export const CardImage = styled(StyledImage)`
   grid-area: CardImage;
 `;
