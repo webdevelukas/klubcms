@@ -14,7 +14,7 @@ const StyledMenuList = styled.ul`
   background: ${props => props.theme.main};
   padding: 0;
   margin: 0;
-  position: relative;
+  position: absolute;
 
   /* Open/Close Animation */
   transition: transform 0.3s ease-in-out;
