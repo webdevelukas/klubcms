@@ -52,7 +52,7 @@ button, input, select, textarea {
 hr {
   width:100%;
   border-color: ${props => props.theme.main};
-  margin:2em 0;
+  margin:2em 0 1em;
 }
 
 `;
