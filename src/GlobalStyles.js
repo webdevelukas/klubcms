@@ -20,7 +20,7 @@ body {
   width:100vw;
   margin: 0;
   background: #e1e1e1;
-  overflow:hidden;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -29,7 +29,9 @@ h1 {
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 1.4em;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -50,7 +52,7 @@ button, input, select, textarea {
 hr {
   width:100%;
   border-color: ${props => props.theme.main};
-  margin:2em 0;
+  margin:2em 0 1em;
 }
 
 `;

@@ -1,9 +1,6 @@
 import React from "react";
-import styled from "styled-components";
 import Card from "./Card";
 import { getArticles } from "../api/fetch";
-
-const StyledCardList = styled.section``;
 
 export default function CardList() {
   const [articles, setArticles] = React.useState([]);
@@ -15,10 +12,10 @@ export default function CardList() {
   }, []);
 
   return (
-    <StyledCardList>
+    <section>
       {articles.map(article => {
         return <Card key={article.articleId} article={article} />;
       })}
-    </StyledCardList>
+    </section>
   );
 }

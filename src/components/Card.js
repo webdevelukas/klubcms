@@ -33,7 +33,7 @@ const StyledCard = styled.article`
   width: 100%;
   height: 180px;
   background: ${props => props.theme.highlightContrast};
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
   padding: 0.6em 0.8em;
 `;
 
