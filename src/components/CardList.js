@@ -1,15 +1,23 @@
 import React from "react";
 import styled from "styled-components";
-import { articles } from "../api/articles";
 import Card from "./Card";
+import { getArticles } from "../api/fetch";
 
 const StyledCardList = styled.section``;
 
 export default function CardList() {
+  const [articles, setArticles] = React.useState([]);
+
+  React.useEffect(() => {
+    getArticles().then(fetchedArticles => {
+      setArticles(fetchedArticles);
+    });
+  }, []);
+
   return (
     <StyledCardList>
       {articles.map(article => {
-        return <Card key={article.title} article={article} />;
+        return <Card key={article.articleId} article={article} />;
       })}
     </StyledCardList>
   );

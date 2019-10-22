@@ -13,5 +13,5 @@ export default function CardTitleOverline({ children }) {
 }
 
 CardTitleOverline.propTypes = {
-  children: PropTypes.string
+  children: PropTypes.node
 };

@@ -12,6 +12,14 @@ import DateOfLatestUpdate from "./DateOfLatestUpdate";
 import { SquareCardButtonWithIcon } from "./Button";
 import WrenchIcon from "../icons/WrenchIcon";
 
+function IsFinished(category) {
+  if (category) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
 const StyledCard = styled.article`
   display: grid;
   grid-template-areas:
@@ -32,19 +40,21 @@ const StyledCard = styled.article`
 export default function Card({ article }) {
   return (
     <StyledCard>
-      <CardImage src={article.images} />
+      <CardImage src={article.media.images.main} />
       <CardTitleOverline>
-        {article.addDate} - {article.author}
+        {article.date.added} - {article.author}
       </CardTitleOverline>
       <CardTitle>{article.title}</CardTitle>
       <ProgressBarList>
         <ProgressBarListItem finished={IsFinished(article.text)}>
           Text
         </ProgressBarListItem>
-        <ProgressBarListItem finished={IsFinished(article.images)}>
+        <ProgressBarListItem
+          finished={IsFinished(article.media.images.gallery)}
+        >
           Photos
         </ProgressBarListItem>
-        <ProgressBarListItem finished={IsFinished(article.published)}>
+        <ProgressBarListItem finished={IsFinished(article.date.published)}>
           Published
         </ProgressBarListItem>
       </ProgressBarList>
@@ -53,7 +63,9 @@ export default function Card({ article }) {
           return <Badge key={category}>{category}</Badge>;
         })}
       </BadgeList>
-      <DateOfLatestUpdate>Last Update: {article.updateDate}</DateOfLatestUpdate>
+      <DateOfLatestUpdate>
+        Last Update: {article.date.updated}
+      </DateOfLatestUpdate>
       <SquareCardButtonWithIcon>
         <WrenchIcon />
         Edit
@@ -65,11 +77,3 @@ export default function Card({ article }) {
 Card.propTypes = {
   article: PropTypes.object
 };
-
-function IsFinished(category) {
-  if (category) {
-    return true;
-  } else {
-    return false;
-  }
-}
