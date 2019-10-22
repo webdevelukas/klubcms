@@ -18,7 +18,14 @@ export default function EditArticle() {
       <MainArea>
         <h1>What do you want to edit?</h1>
         <hr />
-        <FunctionBar></FunctionBar>
+        <FunctionBar>
+          <div>
+            Date added: <b>12.10.2019</b>
+          </div>
+          <div>
+            Date updated: <b>16.10.2019</b>
+          </div>
+        </FunctionBar>
         <h2>Event</h2>
         <ButtonWithIcon>
           <ArrowDropDownIcon />
