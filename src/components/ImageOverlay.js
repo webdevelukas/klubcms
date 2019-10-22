@@ -17,11 +17,19 @@ export const StyledImageOverlay = styled.div`
   cursor: pointer;
 `;
 
-export default function ImageOverlay({ children, onClick }) {
-  return <StyledImageOverlay onClick={onClick}>{children}</StyledImageOverlay>;
+export default function ImageOverlay({ showAll, setShowAll }) {
+  return (
+    <StyledImageOverlay
+      onClick={() => {
+        setShowAll(!showAll);
+      }}
+    >
+      {showAll ? "Show less" : "Show all"}
+    </StyledImageOverlay>
+  );
 }
 
 ImageOverlay.propTypes = {
-  onClick: PropTypes.func,
-  children: PropTypes.node
+  showAll: PropTypes.bool,
+  setShowAll: PropTypes.func
 };

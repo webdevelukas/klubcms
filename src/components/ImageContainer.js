@@ -10,12 +10,18 @@ const StyledImageContainer = styled.picture`
 
 export const SquareImageContainer = styled(StyledImageContainer)`
   padding-bottom: 100%;
+  display: ${props => (props.galleryImagesLength <= 4 ? "none" : "block")};
 `;
 
-export default function ImageContainer({ children }) {
-  return <StyledImageContainer>{children}</StyledImageContainer>;
+export default function ImageContainer({ children, galleryImagesLength }) {
+  return (
+    <StyledImageContainer galleryImagesLength={galleryImagesLength}>
+      {children}
+    </StyledImageContainer>
+  );
 }
 
 ImageContainer.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
+  galleryImagesLength: PropTypes.number
 };
