@@ -23,6 +23,7 @@ export default function Articles() {
           Add Article
         </SquareButtonWithIcon>
         <hr />
+        <h2>Your latest articles</h2>
         <CardList />
       </StyledArticles>
     </>

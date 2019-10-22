@@ -25,11 +25,11 @@ body {
 
 h1 {
   font-size: 2em;
-  text-align: center;
 }
 
 h2 {
-  font-size: 1.2em;
+  font-size: 1.4em;
+  text-transform: uppercase;
 }
 
 h3 {
