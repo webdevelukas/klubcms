@@ -20,15 +20,17 @@ body {
   width:100vw;
   margin: 0;
   background: #e1e1e1;
-  overflow:hidden;
+  overflow-x: hidden;
 }
 
 h1 {
   font-size: 2em;
+  text-align: center;
 }
 
 h2 {
   font-size: 1.4em;
+  text-align: center;
   text-transform: uppercase;
 }
 
