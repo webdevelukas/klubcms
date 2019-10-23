@@ -24,12 +24,13 @@ body {
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 2.5em;
+  line-height: 1.5em;
   text-align: center;
 }
 
 h2 {
-  font-size: 1.4em;
+  font-size: 1.5em;
   text-align: center;
   text-transform: uppercase;
   margin: 1em 0 0.25em;
