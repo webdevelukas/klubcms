@@ -3,8 +3,8 @@ import MainArea from "../components/MainArea";
 import Menu from "../components/Menu";
 import FunctionBar from "../components/FunctionBar";
 import Button, {
-  ButtonWithIcon,
-  SquareButtonWithIcon
+  SquareButtonWithIcon,
+  ButtonWithIconFullWidth
 } from "../components/Button";
 import ArrowDropDownIcon from "../icons/ArrowDropDownIcon";
 import Textarea, { TextareaWithBoldText } from "../components/Textarea";
@@ -27,10 +27,10 @@ export default function EditArticle() {
           </div>
         </FunctionBar>
         <h2>Event</h2>
-        <ButtonWithIcon>
+        <ButtonWithIconFullWidth>
           <ArrowDropDownIcon />
           Event variable
-        </ButtonWithIcon>
+        </ButtonWithIconFullWidth>
         <h2>Title</h2>
         <TextareaWithBoldText placeholder="What are you talking about?" />
         <h2>Text</h2>
