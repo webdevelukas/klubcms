@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import MenuListItem from "./MenuListItem";
+import { Link } from "react-router-dom";
 
 const StyledNav = styled.nav`
   display: flex;
@@ -25,9 +26,15 @@ export default function MenuList({ open }) {
   return (
     <StyledNav>
       <StyledMenuList open={open}>
-        <MenuListItem active>Actual Page</MenuListItem>
-        <MenuListItem>Articles</MenuListItem>
-        <MenuListItem>Create new article</MenuListItem>
+        <Link to="/">
+          <MenuListItem active>Articles</MenuListItem>
+        </Link>
+        <Link to="/editarticle">
+          <MenuListItem>Edit Article</MenuListItem>
+        </Link>
+        <Link to="/newarticle">
+          <MenuListItem>New Article</MenuListItem>
+        </Link>
       </StyledMenuList>
     </StyledNav>
   );

@@ -24,6 +24,7 @@ const StyledGallery = styled.section`
   grid-auto-rows: auto;
   grid-gap: 3px;
   padding: 0 3px;
+  margin: 0 0 1rem;
 `;
 
 export default function Gallery() {
