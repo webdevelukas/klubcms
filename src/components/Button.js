@@ -14,7 +14,7 @@ const StyledButton = styled.button`
   color: ${props =>
     props.active ? props.theme.highlight : props.theme.highlightContrast};
   padding: 0.2rem 2rem;
-  margin: 1.5rem 0;
+  margin: 2.5rem 0;
   fill: ${props =>
     props.active ? props.theme.highlight : props.theme.highlightContrast};
   font-weight: 700;
