@@ -2,13 +2,13 @@ import React from "react";
 import { ThemeProvider } from "styled-components";
 import defaultTheme from "./themes/default";
 import GlobalStyles from "./GlobalStyles";
-import Submit from "./pages/Submit";
+import Error from "./pages/Error";
 
 function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyles />
-      <Submit />
+      <Error />
     </ThemeProvider>
   );
 }
