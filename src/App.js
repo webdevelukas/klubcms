@@ -2,13 +2,13 @@ import React from "react";
 import { ThemeProvider } from "styled-components";
 import defaultTheme from "./themes/default";
 import GlobalStyles from "./GlobalStyles";
-import EditArticle from "./pages/EditArticle";
+import NewArticle from "./pages/NewArticle";
 
 function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyles />
-      <EditArticle />
+      <NewArticle />
     </ThemeProvider>
   );
 }
