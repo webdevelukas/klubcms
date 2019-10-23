@@ -20,7 +20,7 @@ const StyledButton = styled.button`
   cursor: pointer;
 `;
 
-// Styling for buttons with an icon on the left
+// Styling for buttons with an icon on the left or right
 export const ButtonWithIcon = styled(Button)`
   padding: 0 0.8em 0 0.3em;
 
@@ -28,6 +28,12 @@ export const ButtonWithIcon = styled(Button)`
     width: 24px;
     height: 24px;
   }
+`;
+
+// Styling for buttons with a 100% width and an icon on the left or right
+export const ButtonWithIconFullWidth = styled(ButtonWithIcon)`
+  width: 100%;
+  padding: 0.6em 0.8em;
 `;
 
 // Styling for square buttons with a big icon above the text

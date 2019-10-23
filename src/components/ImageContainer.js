@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 const StyledImageContainer = styled.picture`
   position: relative;
   width: 100%;
-  height: 100%;
+  height: auto;
 `;
 
 export const SquareImageContainer = styled(StyledImageContainer)`

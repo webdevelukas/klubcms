@@ -18,11 +18,13 @@ const imageId05 =
   "https://images.unsplash.com/photo-1516283250450-174387a1af6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60";
 
 const StyledGallery = styled.section`
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: auto;
   grid-gap: 3px;
   padding: 0 3px;
+  margin-bottom: 1em;
 `;
 
 export default function Gallery() {

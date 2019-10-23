@@ -32,6 +32,7 @@ h2 {
   font-size: 1.4em;
   text-align: center;
   text-transform: uppercase;
+  margin: 1em 0 0.25em;
 }
 
 h3 {
