@@ -2,13 +2,13 @@ import React from "react";
 import { ThemeProvider } from "styled-components";
 import defaultTheme from "./themes/default";
 import GlobalStyles from "./GlobalStyles";
-import Login from "./pages/Login";
+import Submit from "./pages/Submit";
 
 function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyles />
-      <Login />
+      <Submit />
     </ThemeProvider>
   );
 }
