@@ -1,8 +1,8 @@
 {
   "articles": [
     {
-      "articleId": "1",
-      "eventId": "1",
+      "id": "1",
+      "eventId": "17",
       "title": "Artikel 1",
       "author": "userId1",
       "date": {
@@ -11,18 +11,24 @@
         "published": ""
       },
       "categories": ["Fussball", "Herren", "1. Mannschaft"],
-      "text": "Aber der Reihe nach: Am vorletzen Spieltag der Saison 2018/19 ging es mit einem 5 Punkte Vorsprung vor der SpVgg Zolling zum TSV Au II. Wir konnten uns also mit einem Sieg die vorzeitige Meisterschaft sichern.",
+      "content": "Aber der Reihe nach: Am vorletzen Spieltag der Saison 2018/19 ging es mit einem 5 Punkte Vorsprung vor der SpVgg Zolling zum TSV Au II. Wir konnten uns also mit einem Sieg die vorzeitige Meisterschaft sichern.",
       "media": {
         "images": {
           "main": "https://images.unsplash.com/photo-1518657205760-dafa7ef924de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
-          "gallery": ["imageId1", "imageId2", "imageId3"]
+          "gallery": [
+            "https://images.unsplash.com/photo-1518657205760-dafa7ef924de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+            "https://images.unsplash.com/photo-1554331468-3d4032983519?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+            "https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+            "https://images.unsplash.com/photo-1524748969064-cf3dabd7b84d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
+            "https://images.unsplash.com/photo-1516283250450-174387a1af6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+          ]
         },
         "videos": ["videoId1", "videoId2", "videoId3"],
         "audio": ["audioId1", "audioId2", "audioId3"]
       }
     },
     {
-      "articleId": "2",
+      "id": "2",
       "eventId": "1",
       "title": "Klasse Spiel unserer U9 gegen den amtierenden Meister",
       "author": "userId1",
@@ -32,15 +38,52 @@
         "published": "02.10.2019"
       },
       "categories": ["Fussball", "Junioren", "U9"],
-      "text": "Aber der Reihe nach: Am vorletzen Spieltag der Saison 2018/19 ging es mit einem 5 Punkte Vorsprung vor der SpVgg Zolling zum TSV Au II. Wir konnten uns also mit einem Sieg die vorzeitige Meisterschaft sichern.",
+      "content": "Aber der Reihe nach: Am vorletzen Spieltag der Saison 2018/19 ging es mit einem 5 Punkte Vorsprung vor der SpVgg Zolling zum TSV Au II. Wir konnten uns also mit einem Sieg die vorzeitige Meisterschaft sichern.",
       "media": {
         "images": {
           "main": "https://images.unsplash.com/photo-1508087625439-de3978963553?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80",
-          "gallery": ""
+          "gallery": []
         },
         "videos": ["videoId1", "videoId2", "videoId3"],
         "audio": ["audioId1", "audioId2", "audioId3"]
       }
+    },
+    {
+      "id": "3",
+      "eventId": "1",
+      "title": "Klasse Spiel unserer U9 gegen den amtierenden Meister",
+      "author": "userId1",
+      "date": {
+        "added": "25.09.2019",
+        "updated": "11.10.2019",
+        "published": "02.10.2019"
+      },
+      "categories": ["Fussball", "Junioren", "U9"],
+      "content": "Aber der Reihe nach: Am vorletzen Spieltag der Saison 2018/19 ging es mit einem 5 Punkte Vorsprung vor der SpVgg Zolling zum TSV Au II. Wir konnten uns also mit einem Sieg die vorzeitige Meisterschaft sichern. Aber der Reihe nach: Am vorletzen Spieltag der Saison 2018/19 ging es mit einem 5 Punkte Vorsprung vor der SpVgg Zolling zum TSV Au II. Wir konnten uns also mit einem Sieg die vorzeitige Meisterschaft sichern. Aber der Reihe nach: Am vorletzen Spieltag der Saison 2018/19 ging es mit einem 5 Punkte Vorsprung vor der SpVgg Zolling zum TSV Au II. Wir konnten uns also mit einem Sieg die vorzeitige Meisterschaft sichern.",
+      "media": {
+        "images": {
+          "main": "https://images.unsplash.com/photo-1508087625439-de3978963553?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80",
+          "gallery": []
+        },
+        "videos": ["videoId1", "videoId2", "videoId3"],
+        "audio": ["audioId1", "audioId2", "audioId3"]
+      }
+    }
+  ],
+  "events": [
+    {
+      "id": "Event1",
+      "name": "1. Spieltag vs SV Marzling",
+      "date": "13.10.2019",
+      "articles": ["articleId1", "articleId2"],
+      "categories": ["categoryId1", "categoryId2", "categoryId3"]
+    },
+    {
+      "id": "Event2",
+      "name": "1. Spieltag vs SV Marzling",
+      "date": "13.10.2019",
+      "articles": ["articleId1", "articleId2"],
+      "categories": ["categoryId1", "categoryId2", "categoryId3"]
     }
   ]
 }
