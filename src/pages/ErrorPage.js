@@ -11,7 +11,7 @@ const StyledButton = styled(Button)`
     3px 3px 0;
 `;
 
-export default function Fault() {
+export default function ErrorPage() {
   return (
     <ColoredMainArea bgColor={({ theme }) => theme.highlight}>
       <h1>No worries, you just forgot to add content</h1>
