@@ -62,10 +62,7 @@ hr {
 }
 
 a {
-  text-decoration: inherit;
-  color: inherit;
-  fill: inherit;
-  all: none;
+  text-decoration: none;
 }
 
 `;
