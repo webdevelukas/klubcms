@@ -17,6 +17,8 @@ const StyledButton = styled.button`
   fill: ${props =>
     props.active ? props.theme.highlight : props.theme.highlightContrast};
   font-weight: 700;
+  width: fit-content;
+  margin: 1rem;
   cursor: pointer;
 `;
 
@@ -57,6 +59,7 @@ export const SquareCardButtonWithIcon = styled(SquareButtonWithIcon)`
   width: 66px;
   height: 66px;
   font-size: 0.8em;
+  margin: 0;
 
   svg {
     width: 32px;
@@ -64,12 +67,8 @@ export const SquareCardButtonWithIcon = styled(SquareButtonWithIcon)`
   }
 `;
 
-export default function Button({ children, onClick, active, className }) {
-  return (
-    <StyledButton onClick={onClick} active={active} className={className}>
-      {children}
-    </StyledButton>
-  );
+export default function Button({ ...props }) {
+  return <StyledButton {...props}></StyledButton>;
 }
 
 Button.propTypes = {

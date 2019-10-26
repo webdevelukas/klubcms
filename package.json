@@ -15,7 +15,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "jsonserver": "json-server --watch db.json"
+    "fake-api": "json-server --watch db.json"
   },
   "eslintConfig": {
     "extends": "react-app"
