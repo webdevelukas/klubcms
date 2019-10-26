@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { SquareImageContainer } from "./ImageContainer";
@@ -18,19 +18,21 @@ const imageId05 =
   "https://images.unsplash.com/photo-1516283250450-174387a1af6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60";
 
 const StyledGallery = styled.section`
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-auto-rows: auto;
   grid-gap: 3px;
   padding: 0 3px;
+  margin: 0 0 1rem;
 `;
 
 export default function Gallery() {
   const [showAll, setShowAll] = useState(false);
   const galleryImages = [imageId01, imageId02, imageId03, imageId04, imageId05];
-  const [slicedGallery, setSlicedGallery] = useState(galleryImages);
+  const [slicedGallery, setSlicedGallery] = useState([]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (galleryImages.length === 4) {
       setSlicedGallery(galleryImages);
     }
@@ -40,6 +42,7 @@ export default function Gallery() {
     if (galleryImages.length > 4 && showAll === true) {
       setSlicedGallery(galleryImages);
     }
+    // eslint-disable-next-line
   }, [showAll]);
 
   return (

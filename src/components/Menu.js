@@ -1,13 +1,19 @@
 import React, { useState } from "react";
+import styled from "styled-components";
 import MenuBar from "./MenuBar";
 import MenuList from "./MenuList";
+
+const StyledMenu = styled.section`
+  position: relative;
+  display: flex;
+`;
 
 export default function Menu() {
   const [open, setOpen] = useState(false);
   return (
-    <section>
+    <StyledMenu>
       <MenuBar open={open} setOpen={setOpen} />
       <MenuList open={open} setOpen={setOpen} />
-    </section>
+    </StyledMenu>
   );
 }

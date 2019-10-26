@@ -13,14 +13,16 @@ const StyledButton = styled.button`
     3px 3px 0;
   color: ${props =>
     props.active ? props.theme.highlight : props.theme.highlightContrast};
-  padding: 0 0.8em;
+  padding: 0.2rem 2rem;
   fill: ${props =>
     props.active ? props.theme.highlight : props.theme.highlightContrast};
   font-weight: 700;
+  width: fit-content;
+  margin: 1rem;
   cursor: pointer;
 `;
 
-// Styling for buttons with an icon on the left
+// Styling for buttons with an icon on the left or right
 export const ButtonWithIcon = styled(Button)`
   padding: 0 0.8em 0 0.3em;
 
@@ -28,6 +30,12 @@ export const ButtonWithIcon = styled(Button)`
     width: 24px;
     height: 24px;
   }
+`;
+
+// Styling for buttons with a 100% width and an icon on the left or right
+export const ButtonWithIconFullWidth = styled(ButtonWithIcon)`
+  width: 100%;
+  padding: 0.6em 0.8em;
 `;
 
 // Styling for square buttons with a big icon above the text
@@ -51,6 +59,7 @@ export const SquareCardButtonWithIcon = styled(SquareButtonWithIcon)`
   width: 66px;
   height: 66px;
   font-size: 0.8em;
+  margin: 0;
 
   svg {
     width: 32px;
@@ -58,12 +67,8 @@ export const SquareCardButtonWithIcon = styled(SquareButtonWithIcon)`
   }
 `;
 
-export default function Button({ children, onClick, active, className }) {
-  return (
-    <StyledButton onClick={onClick} active={active} className={className}>
-      {children}
-    </StyledButton>
-  );
+export default function Button({ ...props }) {
+  return <StyledButton {...props}></StyledButton>;
 }
 
 Button.propTypes = {

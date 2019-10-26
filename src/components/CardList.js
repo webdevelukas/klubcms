@@ -1,24 +1,17 @@
 import React from "react";
-import styled from "styled-components";
+import PropTypes from "prop-types";
 import Card from "./Card";
-import { getArticles } from "../api/fetch";
 
-const StyledCardList = styled.section``;
-
-export default function CardList() {
-  const [articles, setArticles] = React.useState([]);
-
-  React.useEffect(() => {
-    getArticles().then(fetchedArticles => {
-      setArticles(fetchedArticles);
-    });
-  }, []);
-
+export default function CardList({ articles }) {
   return (
-    <StyledCardList>
+    <section>
       {articles.map(article => {
-        return <Card key={article.articleId} article={article} />;
+        return <Card key={article.id} article={article} />;
       })}
-    </StyledCardList>
+    </section>
   );
 }
+
+CardList.propTypes = {
+  articles: PropTypes.array
+};

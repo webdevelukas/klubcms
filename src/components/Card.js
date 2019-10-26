@@ -1,6 +1,10 @@
+// Imported dependencies
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import { useHistory } from "react-router-dom";
+
+// Imported components / icons
 import { CardImage } from "./Image";
 import CardTitleOverline from "./CardTitleOverline";
 import CardTitle from "./CardTitle";
@@ -11,14 +15,6 @@ import Badge from "./Badge";
 import DateOfLatestUpdate from "./DateOfLatestUpdate";
 import { SquareCardButtonWithIcon } from "./Button";
 import WrenchIcon from "../icons/WrenchIcon";
-
-function IsFinished(category) {
-  if (category) {
-    return true;
-  } else {
-    return false;
-  }
-}
 
 const StyledCard = styled.article`
   display: grid;
@@ -33,44 +29,55 @@ const StyledCard = styled.article`
   width: 100%;
   height: 180px;
   background: ${props => props.theme.highlightContrast};
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
   padding: 0.6em 0.8em;
 `;
 
 export default function Card({ article }) {
+  const history = useHistory();
+
+  function linkTo(pathAsString) {
+    history.push(pathAsString);
+  }
+
   return (
-    <StyledCard>
-      <CardImage src={article.media.images.main} />
-      <CardTitleOverline>
-        {article.date.added} - {article.author}
-      </CardTitleOverline>
-      <CardTitle>{article.title}</CardTitle>
-      <ProgressBarList>
-        <ProgressBarListItem finished={IsFinished(article.text)}>
-          Text
-        </ProgressBarListItem>
-        <ProgressBarListItem
-          finished={IsFinished(article.media.images.gallery)}
+    <>
+      <StyledCard>
+        <CardImage src={article.media.images.main} />
+        <CardTitleOverline>
+          {article.date.added} - {article.author}
+        </CardTitleOverline>
+        <CardTitle>{article.title}</CardTitle>
+        <ProgressBarList>
+          <ProgressBarListItem finished={!!article.content}>
+            Text
+          </ProgressBarListItem>
+          <ProgressBarListItem
+            finished={!!article.media.images.gallery.length > 0}
+          >
+            Photos
+          </ProgressBarListItem>
+          <ProgressBarListItem finished={!!article.date.published}>
+            Published
+          </ProgressBarListItem>
+        </ProgressBarList>
+        <BadgeList>
+          {article.categories.map(category => {
+            return <Badge key={category}>{category}</Badge>;
+          })}
+        </BadgeList>
+        <DateOfLatestUpdate>
+          Last Update: {article.date.updated}
+        </DateOfLatestUpdate>
+
+        <SquareCardButtonWithIcon
+          onClick={() => linkTo(`/editarticle/${article.id}`)}
         >
-          Photos
-        </ProgressBarListItem>
-        <ProgressBarListItem finished={IsFinished(article.date.published)}>
-          Published
-        </ProgressBarListItem>
-      </ProgressBarList>
-      <BadgeList>
-        {article.categories.map(category => {
-          return <Badge key={category}>{category}</Badge>;
-        })}
-      </BadgeList>
-      <DateOfLatestUpdate>
-        Last Update: {article.date.updated}
-      </DateOfLatestUpdate>
-      <SquareCardButtonWithIcon>
-        <WrenchIcon />
-        Edit
-      </SquareCardButtonWithIcon>
-    </StyledCard>
+          <WrenchIcon />
+          Edit
+        </SquareCardButtonWithIcon>
+      </StyledCard>
+    </>
   );
 }
 
