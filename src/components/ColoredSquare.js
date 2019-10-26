@@ -15,5 +15,5 @@ export default function ColoredSquare({ backgroundColor }) {
 }
 
 ColoredSquare.propTypes = {
-  backgroundColor: PropTypes.string
+  backgroundColor: PropTypes.func
 };

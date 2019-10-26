@@ -1,6 +1,6 @@
 export const articles = [
   {
-    articleId: "1",
+    id: "1",
     eventId: "1",
     title: "Artikel 1",
     author: "userId1",
@@ -10,7 +10,7 @@ export const articles = [
       published: ""
     },
     categories: ["Fussball", "Herren", "1. Mannschaft"],
-    text:
+    content:
       "Aber der Reihe nach: Am vorletzen Spieltag der Saison 2018/19 ging es mit einem 5 Punkte Vorsprung vor der SpVgg Zolling zum TSV Au II. Wir konnten uns also mit einem Sieg die vorzeitige Meisterschaft sichern.",
     media: {
       images: {
