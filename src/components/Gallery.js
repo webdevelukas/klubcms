@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { SquareImageContainer } from "./ImageContainer";
@@ -30,9 +30,9 @@ const StyledGallery = styled.section`
 export default function Gallery() {
   const [showAll, setShowAll] = useState(false);
   const galleryImages = [imageId01, imageId02, imageId03, imageId04, imageId05];
-  const [slicedGallery, setSlicedGallery] = useState(galleryImages);
+  const [slicedGallery, setSlicedGallery] = useState([]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (galleryImages.length === 4) {
       setSlicedGallery(galleryImages);
     }
@@ -42,6 +42,7 @@ export default function Gallery() {
     if (galleryImages.length > 4 && showAll === true) {
       setSlicedGallery(galleryImages);
     }
+    // eslint-disable-next-line
   }, [showAll]);
 
   return (

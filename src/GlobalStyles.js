@@ -17,7 +17,7 @@ html {
 
 body {
   height: 100vh;
-  width:100vw;
+  width: 100vw;
   margin: 0;
   background: #e1e1e1;
   overflow-x: hidden;
@@ -62,7 +62,10 @@ hr {
 }
 
 a {
-  text-decoration: none;
+  text-decoration: inherit;
+  color: inherit;
+  fill: inherit;
+  all: none;
 }
 
 `;
