@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
 
 const StyledInput = styled.input`
   background: ${props => props.theme.highlightContrast};
@@ -10,6 +9,7 @@ const StyledInput = styled.input`
   padding: 0.5em 0.8em;
   font-weight: 700;
   width: 100%;
+  margin-bottom: 1rem;
 
   ::-webkit-input-placeholder {
     color: hsla(147, 63%, 7%, 0.4);
@@ -19,10 +19,6 @@ const StyledInput = styled.input`
   }
 `;
 
-export default function Input({ placeholder }) {
-  return <StyledInput placeholder={placeholder} />;
+export default function Input({ ...props }) {
+  return <StyledInput {...props} />;
 }
-
-Input.propTypes = {
-  placeholder: PropTypes.string
-};

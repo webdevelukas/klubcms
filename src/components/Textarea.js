@@ -27,10 +27,10 @@ export const TextareaWithBoldText = styled(StyledTextarea)`
   min-height: 60px;
 `;
 
-export default function Textarea({ placeholder }) {
-  return <StyledTextarea placeholder={placeholder} />;
+export default function Textarea({ children, ...props }) {
+  return <StyledTextarea {...props}>{children}</StyledTextarea>;
 }
 
 Textarea.propTypes = {
-  placeholder: PropTypes.string
+  children: PropTypes.node
 };
