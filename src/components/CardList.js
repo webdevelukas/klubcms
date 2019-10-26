@@ -1,21 +1,17 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Card from "./Card";
-import { getArticles } from "../api/fetch";
 
-export default function CardList() {
-  const [articles, setArticles] = React.useState([]);
-
-  React.useEffect(() => {
-    getArticles().then(fetchedArticles => {
-      setArticles(fetchedArticles);
-    });
-  }, []);
-
+export default function CardList({ articles }) {
   return (
     <section>
       {articles.map(article => {
-        return <Card key={article.articleId} article={article} />;
+        return <Card key={article.id} article={article} />;
       })}
     </section>
   );
 }
+
+CardList.propTypes = {
+  articles: PropTypes.array
+};
