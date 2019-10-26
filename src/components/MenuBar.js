@@ -6,6 +6,7 @@ import MenuBurger from "./MenuBurger";
 import { GoBack } from "../stories/8-UIElements.stories";
 
 const StyledMenuBar = styled.div`
+  z-index: 102;
   position: relative;
   width: 100%;
   height: 70px;
