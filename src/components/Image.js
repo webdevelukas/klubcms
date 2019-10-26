@@ -14,7 +14,7 @@ export const UserImage = styled(StyledImage)`
   height: 80px;
   border-radius: 50%;
   border: 3px solid ${props => props.theme.highlightContrast};
-  z-index: 1;
+  z-index: 101;
 `;
 
 export const GalleryImage = styled(StyledImage)`
