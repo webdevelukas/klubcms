@@ -1,27 +1,30 @@
+// Imported dependencies / functions
 import React from "react";
 import PropTypes from "prop-types";
+import { getArticle } from "../api/fetch";
+import { articleTemplate } from "../api/articles";
+
+// Imported components / icons
 import MainArea from "../components/MainArea";
 import Menu from "../components/Menu";
 import FunctionBar from "../components/FunctionBar";
 import Button from "../components/Button";
 import Textarea, { TextareaWithBoldText } from "../components/Textarea";
-
 import Gallery from "../components/Gallery";
 import { DropdownFullWidth } from "../components/Dropdown";
 import Form from "../components/Form";
 import Input from "../components/Input";
-import { getArticle } from "../api/fetch";
 
 export default function EditArticlePage({ match }) {
   const {
     params: { articleId }
   } = match;
-  const [article, setArticle] = React.useState({});
+
+  // Can I use mongoose for this?
+  const [article, setArticle] = React.useState(articleTemplate);
 
   React.useEffect(() => {
-    getArticle(articleId).then(fetchedArticle => {
-      setArticle(fetchedArticle);
-    });
+    getArticle(articleId).then(fetchedArticle => setArticle(fetchedArticle));
   }, [articleId]);
 
   return (
@@ -32,10 +35,10 @@ export default function EditArticlePage({ match }) {
         <hr />
         <FunctionBar>
           <div>
-            Date added: <b>placeholder</b>
+            Date added: <b>{article.date.added}</b>
           </div>
           <div>
-            Date updated: <b>placeholder</b>
+            Date updated: <b>{article.date.updated}</b>
           </div>
         </FunctionBar>
         <h2>Event</h2>
@@ -54,7 +57,7 @@ export default function EditArticlePage({ match }) {
             defaultValue={article.content}
           />
           <h2>Photos</h2>
-          <Gallery article={article} />
+          <Gallery articleGallery={article.media.images.gallery} />
 
           <Input type="file" multiple />
 
@@ -67,5 +70,6 @@ export default function EditArticlePage({ match }) {
 }
 
 EditArticlePage.propTypes = {
-  match: PropTypes.object
+  match: PropTypes.object,
+  article: PropTypes.object
 };

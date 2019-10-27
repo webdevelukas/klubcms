@@ -1,23 +1,32 @@
+// Imported dependencies / functions
 import React from "react";
 import { useHistory } from "react-router-dom";
 import PropTypes from "prop-types";
+import { getArticles } from "../api/fetch";
 
 // Imported components / icons
 import Menu from "../components/Menu";
 import { SquareButtonWithIcon } from "../components/Button";
-import NewspaperIcon from "../icons/NewspaperIcon";
 import CardList from "../components/CardList";
 import FunctionBar from "../components/FunctionBar";
 import ProgressGlossary from "../components/ProgressGlossary";
 import MainArea from "../components/MainArea";
 import Dropdown from "../components/Dropdown";
+import NewspaperIcon from "../icons/NewspaperIcon";
 
-export default function ArticlesPage({ articles }) {
+export default function ArticlesPage() {
   const history = useHistory();
+  const [articles, setArticles] = React.useState([]);
 
   function linkTo(pathAsString) {
     history.push(pathAsString);
   }
+
+  React.useEffect(() => {
+    getArticles().then(fetchedArticles => {
+      setArticles(fetchedArticles);
+    });
+  }, []);
   return (
     <>
       <Menu />
