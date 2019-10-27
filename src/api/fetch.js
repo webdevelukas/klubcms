@@ -11,3 +11,10 @@ export async function getArticle(articleId) {
   ).then(response => response.json());
   return promise;
 }
+
+export async function getEvents() {
+  const promise = await fetch("http://localhost:3000/events").then(response =>
+    response.json()
+  );
+  return promise;
+}
