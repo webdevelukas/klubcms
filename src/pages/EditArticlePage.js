@@ -20,19 +20,20 @@ export default function EditArticlePage({ match }) {
   } = match;
 
   const [article, setArticle] = useState(false);
-  const [events, setEvents] = useState([]);
+  const [events, setEvents] = useState(false);
+
   useEffect(() => {
     getArticle(articleId).then(fetchedArticle => setArticle(fetchedArticle));
-
     getEvents().then(fetchedEvents => {
       setEvents(fetchedEvents);
     });
     // eslint-disable-next-line
   }, []);
+
   return (
     <>
       <Menu />
-      {article ? (
+      {article && events ? (
         <MainArea>
           <h1>What do you want to edit?</h1>
           <hr />
@@ -45,7 +46,6 @@ export default function EditArticlePage({ match }) {
               Date updated: <b>{article.date.updated}</b>
             </div>
           </FunctionBar>
-
           <Form>
             <h2>Event</h2>
             <DropdownFullWidth defaultValue={article.eventId}>
