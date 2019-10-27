@@ -2,7 +2,7 @@
   "articles": [
     {
       "id": "1",
-      "eventId": "17",
+      "eventId": "1",
       "title": "Artikel 1",
       "author": "userId1",
       "date": {
@@ -29,7 +29,7 @@
     },
     {
       "id": "2",
-      "eventId": "1",
+      "eventId": "2",
       "title": "Klasse Spiel unserer U9 gegen den amtierenden Meister",
       "author": "userId1",
       "date": {
@@ -53,7 +53,7 @@
     },
     {
       "id": "3",
-      "eventId": "1",
+      "eventId": "3",
       "title": "Klasse Spiel unserer U9 gegen den amtierenden Meister",
       "author": "userId1",
       "date": {
@@ -80,16 +80,23 @@
   ],
   "events": [
     {
-      "id": "Event1",
+      "id": "1",
       "name": "1. Spieltag vs SV Marzling",
       "date": "13.10.2019",
       "articles": ["articleId1", "articleId2"],
       "categories": ["categoryId1", "categoryId2", "categoryId3"]
     },
     {
-      "id": "Event2",
-      "name": "1. Spieltag vs SV Marzling",
-      "date": "13.10.2019",
+      "id": "2",
+      "name": "2. Spieltag vs SV Marzling",
+      "date": "21.10.2019",
+      "articles": ["articleId1", "articleId2"],
+      "categories": ["categoryId1", "categoryId2", "categoryId3"]
+    },
+    {
+      "id": "3",
+      "name": "3. Spieltag vs SV Marzling",
+      "date": "29.10.2019",
       "articles": ["articleId1", "articleId2"],
       "categories": ["categoryId1", "categoryId2", "categoryId3"]
     }

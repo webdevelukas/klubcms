@@ -1,8 +1,8 @@
 // Imported dependencies / functions
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { getArticle } from "../api/fetch";
-import { articleTemplate } from "../api/articles";
+import { getArticle, getEvents } from "../api/fetch";
+import { articleTemplate } from "../api/articleTemplate";
 
 // Imported components / icons
 import MainArea from "../components/MainArea";
@@ -20,11 +20,15 @@ export default function EditArticlePage({ match }) {
     params: { articleId }
   } = match;
 
-  // Can I use mongoose for this?
-  const [article, setArticle] = React.useState(articleTemplate);
+  const [article, setArticle] = useState(articleTemplate); // Can I use mongoose for this template?
+  const [events, setEvents] = useState([]);
 
   React.useEffect(() => {
     getArticle(articleId).then(fetchedArticle => setArticle(fetchedArticle));
+
+    getEvents().then(fetchedEvents => {
+      setEvents(fetchedEvents);
+    });
   }, [articleId]);
 
   return (
@@ -43,8 +47,14 @@ export default function EditArticlePage({ match }) {
         </FunctionBar>
         <h2>Event</h2>
         <Form>
-          <DropdownFullWidth defaultValue={article.eventId}>
-            <option value={article.eventId}>{article.eventId}</option>
+          <DropdownFullWidth value={article.eventId}>
+            {events.map(event => {
+              return (
+                <option key={event.id} value={event.id}>
+                  {event.date} :: {event.name}
+                </option>
+              );
+            })}
           </DropdownFullWidth>
           <h2>Title</h2>
           <TextareaWithBoldText
