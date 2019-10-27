@@ -69,7 +69,6 @@ export default function Card({ article }) {
         <DateOfLatestUpdate>
           Last Update: {article.date.updated}
         </DateOfLatestUpdate>
-
         <SquareCardButtonWithIcon
           onClick={() => linkTo(`/editarticle/${article.id}`)}
         >
