@@ -1,11 +1,11 @@
-import React from "react";
+// Imported dependencies
 import styled from "styled-components";
 
-const StyledInput = styled.input`
-  background: ${props => props.theme.highlightContrast};
-  box-shadow: ${props => props.theme.highlight} 3px 3px 0;
-  color: ${props => props.theme.main};
-  caret-color: ${props => props.theme.highlight};
+const Input = styled.input`
+  background: ${({ theme }) => theme.highlightContrast};
+  box-shadow: ${({ theme }) => theme.highlight} 3px 3px 0;
+  color: ${({ theme }) => theme.main};
+  caret-color: ${({ theme }) => theme.highlight};
   padding: 0.5em 0.8em;
   font-weight: 700;
   width: 100%;
@@ -19,6 +19,4 @@ const StyledInput = styled.input`
   }
 `;
 
-export default function Input({ ...props }) {
-  return <StyledInput {...props} />;
-}
+export default Input;

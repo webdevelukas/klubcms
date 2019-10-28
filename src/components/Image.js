@@ -1,6 +1,5 @@
-import React from "react";
+// Imported dependencies
 import styled from "styled-components";
-import PropTypes from "prop-types";
 
 const StyledImage = styled.img`
   width: 100%;
@@ -13,7 +12,7 @@ export const UserImage = styled(StyledImage)`
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  border: 3px solid ${props => props.theme.highlightContrast};
+  border: 3px solid ${({ theme }) => theme.highlightContrast};
   z-index: 101;
 `;
 
@@ -25,12 +24,4 @@ export const CardImage = styled(StyledImage)`
   grid-area: CardImage;
 `;
 
-export default function Image({ src, alt }) {
-  return <StyledImage src={src} alt={alt} />;
-}
-
-Image.propTypes = {
-  src: PropTypes.string,
-  alt: PropTypes.string,
-  className: PropTypes.node
-};
+export default Image;

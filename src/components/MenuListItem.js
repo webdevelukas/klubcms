@@ -1,3 +1,4 @@
+// Imported dependencies
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
@@ -10,10 +11,10 @@ const StyledMenuListItem = styled.li`
   height: 60px;
   padding: 0 1.5em;
   margin-bottom: 1px;
-  background: ${props =>
-    props.active ? props.theme.highlightContrast : props.theme.highlight};
-  color: ${props =>
-    props.active ? props.theme.highlight : props.theme.highlightContrast};
+  background: ${({ active, theme }) =>
+    active ? theme.highlightContrast : theme.highlight};
+  color: ${({ active, theme }) =>
+    active ? theme.highlight : theme.highlightContrast};
   font-weight: 700;
   list-style-type: none;
   cursor: pointer;

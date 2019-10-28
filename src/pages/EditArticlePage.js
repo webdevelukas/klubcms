@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { getArticle, getEvents } from "../api/fetch";
 
-// Imported components / icons
+// Imported components
 import MainArea from "../components/MainArea";
 import Menu from "../components/Menu";
 import FunctionBar from "../components/FunctionBar";

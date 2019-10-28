@@ -1,3 +1,4 @@
+// Imported dependencies
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
@@ -10,7 +11,8 @@ const StyledImageContainer = styled.picture`
 
 export const SquareImageContainer = styled(StyledImageContainer)`
   padding-bottom: 100%;
-  display: ${props => (props.galleryImagesLength <= 4 ? "none" : "block")};
+  display: ${({ galleryImagesLength }) =>
+    galleryImagesLength <= 4 ? "none" : "block"};
 `;
 
 export default function ImageContainer({ children, galleryImagesLength }) {

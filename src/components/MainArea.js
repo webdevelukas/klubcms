@@ -1,3 +1,4 @@
+// Imported dependencies
 import styled from "styled-components";
 
 const MainArea = styled.main`

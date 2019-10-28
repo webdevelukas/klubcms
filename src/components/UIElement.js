@@ -1,3 +1,4 @@
+// Imported dependencies
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
@@ -6,8 +7,8 @@ const StyledUIElement = styled.div`
   display: inline-grid;
   justify-items: center;
   align-items: center;
-  fill: ${props => props.theme.highlight};
-  color: ${props => props.theme.highlight};
+  fill: ${({ theme }) => theme.highlight};
+  color: ${({ theme }) => theme.highlight};
   cursor: pointer;
 
   svg {

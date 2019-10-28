@@ -1,3 +1,4 @@
+// Imported dependencies
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
@@ -6,16 +7,16 @@ import PropTypes from "prop-types";
 const StyledButton = styled.button`
   display: flex;
   align-items: center;
-  background: ${props =>
-    props.active ? props.theme.highlightContrast : props.theme.highlight};
-  box-shadow: ${props =>
-      props.active ? props.theme.highlight : props.theme.highlightContrast}
+  background: ${({ active, theme }) =>
+    active ? theme.highlightContrast : theme.highlight};
+  box-shadow: ${({ active, theme }) =>
+      active ? theme.highlight : theme.highlightContrast}
     3px 3px 0;
-  color: ${props =>
-    props.active ? props.theme.highlight : props.theme.highlightContrast};
+  color: ${({ active, theme }) =>
+    active ? theme.highlight : theme.highlightContrast};
   padding: 0.2rem 2rem;
-  fill: ${props =>
-    props.active ? props.theme.highlight : props.theme.highlightContrast};
+  fill: ${({ active, theme }) =>
+    active ? theme.highlight : theme.highlightContrast};
   font-weight: 700;
   width: fit-content;
   margin: 1rem;

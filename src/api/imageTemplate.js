@@ -1,4 +1,4 @@
-export const images = [
+export const imageTemplate = [
   {
     imageId: "",
     name: "",

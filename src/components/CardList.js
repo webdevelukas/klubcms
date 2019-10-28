@@ -1,5 +1,8 @@
+// Imported dependencies
 import React from "react";
 import PropTypes from "prop-types";
+
+// Imported components
 import Card from "./Card";
 
 export default function CardList({ articles }) {

@@ -1,14 +1,13 @@
-import React from "react";
+// Imported dependencies
 import styled from "styled-components";
-import PropTypes from "prop-types";
 
-const StyledBadge = styled.span`
+const Badge = styled.span`
   display: flex;
   align-items: center;
   justify-content: center;
   height: 20px;
-  background: ${props => props.theme.main};
-  color: ${props => props.theme.highlightContrast};
+  background: ${({ theme }) => theme.main};
+  color: ${({ theme }) => theme.highlightContrast};
   padding: 0 0.8em;
   border-radius: 4px;
   font-size: 0.8em;
@@ -22,10 +21,4 @@ const StyledBadge = styled.span`
   }
 `;
 
-export default function Badge({ children }) {
-  return <StyledBadge>{children}</StyledBadge>;
-}
-
-Badge.propTypes = {
-  children: PropTypes.node
-};
+export default Badge;
