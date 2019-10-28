@@ -33,6 +33,7 @@ export default function EditArticlePage({ match }) {
   return (
     <>
       <Menu />
+      {/* Load MainArea if the content is arrived, otherwise write message "Loading Content" */}
       {article && events ? (
         <MainArea>
           <h1>What do you want to edit?</h1>
