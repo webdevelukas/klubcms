@@ -1,8 +1,11 @@
+// Imported dependencies
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import MenuListItem from "./MenuListItem";
 import { useHistory, NavLink } from "react-router-dom";
+
+// Imported components / icons
+import MenuListItem from "./MenuListItem";
 import { UIElementIconRight } from "./UIElement";
 import LogoutPowerIcon from "../icons/LogoutPowerIcon";
 
@@ -13,14 +16,14 @@ const StyledNav = styled.nav`
   width: 280px;
   right: 0;
   height: 100vh;
-  background: ${props => props.theme.main};
+  background: ${({ theme }) => theme.main};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   /* Open/Close Animation */
   transition: transform 0.3s ease-in-out;
-  transform: ${props => (props.open ? "translateX(0)" : "translateX(100%)")};
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
 
   .selected li {
     background: ${({ theme }) => theme.highlightContrast};
@@ -46,9 +49,9 @@ export default function MenuList({ open }) {
         <NavLink to="/" exact activeClassName="selected">
           <MenuListItem>Articles</MenuListItem>
         </NavLink>
-        <NavLink to="/editarticle" activeClassName="selected">
+        {/* <NavLink to="/editarticle" activeClassName="selected">
           <MenuListItem>Edit Article</MenuListItem>
-        </NavLink>
+        </NavLink> */}
         <NavLink to="/newarticle" activeClassName="selected">
           <MenuListItem>New Article</MenuListItem>
         </NavLink>

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { getArticle, getEvents } from "../api/fetch";
 
-// Imported components / icons
+// Imported components
 import MainArea from "../components/MainArea";
 import Menu from "../components/Menu";
 import FunctionBar from "../components/FunctionBar";
@@ -33,6 +33,7 @@ export default function EditArticlePage({ match }) {
   return (
     <>
       <Menu />
+      {/* Load MainArea if the content is arrived, otherwise write message "Loading Content" */}
       {article && events ? (
         <MainArea>
           <h1>What do you want to edit?</h1>

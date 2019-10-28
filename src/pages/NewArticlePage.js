@@ -1,11 +1,13 @@
+// Imported dependencies
 import React from "react";
 import { useHistory } from "react-router-dom";
+
+// Imported components
 import MainArea from "../components/MainArea";
 import Menu from "../components/Menu";
 import FunctionBar from "../components/FunctionBar";
 import Button from "../components/Button";
 import Textarea, { TextareaWithBoldText } from "../components/Textarea";
-
 import { DropdownFullWidth } from "../components/Dropdown";
 import Input from "../components/Input";
 import Form from "../components/Form";

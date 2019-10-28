@@ -1,3 +1,4 @@
+// Imported dependencies
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
@@ -8,8 +9,8 @@ const StyledProgressBarListItem = styled.div`
   justify-content: center;
   width: 100%;
   height: 20px;
-  background: ${props =>
-    props.finished ? props.theme.progressDone : props.theme.progressOpen};
+  background: ${({ finished, theme }) =>
+    finished ? theme.progressDone : theme.progressOpen};
   font-size: 0.8em;
   font-weight: bold;
   text-transform: uppercase;

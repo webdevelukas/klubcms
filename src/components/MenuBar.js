@@ -1,9 +1,13 @@
+// Imported dependencies
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+
+// Imported components / icons
 import { UserImage } from "./Image";
 import MenuBurger from "./MenuBurger";
-import { GoBack } from "../stories/8-UIElements.stories";
+import { UIElementIconLeft } from "./UIElement";
+import GoBackIcon from "../icons/GoBackIcon";
 
 const StyledMenuBar = styled.div`
   z-index: 102;
@@ -11,7 +15,7 @@ const StyledMenuBar = styled.div`
   width: 100%;
   height: 70px;
   padding: 0 1em;
-  background: ${props => props.theme.main};
+  background: ${({ theme }) => theme.main};
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -26,8 +30,11 @@ const StyledUserImage = styled(UserImage)`
 
 export default function MenuBar({ onClick, open, setOpen }) {
   return (
-    <StyledMenuBar>
-      <GoBack onClick={onClick} />
+    <StyledMenuBar onClick={onClick}>
+      <UIElementIconLeft>
+        <GoBackIcon />
+        Go back
+      </UIElementIconLeft>
       <StyledUserImage src="https://images.unsplash.com/photo-1521146764736-56c929d59c83?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80" />
       <MenuBurger open={open} setOpen={setOpen} />
     </StyledMenuBar>

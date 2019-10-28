@@ -1,4 +1,4 @@
-export const events = [
+export const eventTemplate = [
   {
     eventId: "",
     name: "",

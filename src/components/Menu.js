@@ -1,5 +1,8 @@
+// Imported dependencies
 import React, { useState } from "react";
 import styled from "styled-components";
+
+// Imported components
 import MenuBar from "./MenuBar";
 import MenuList from "./MenuList";
 

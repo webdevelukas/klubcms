@@ -1,6 +1,6 @@
-export const videos = [
+export const audioTemplate = [
   {
-    videoId: "",
+    audioId: "",
     name: "",
     author: "userId",
     uploadDate: "",

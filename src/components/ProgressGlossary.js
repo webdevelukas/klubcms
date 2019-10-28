@@ -1,5 +1,8 @@
+// Imported dependencies
 import React from "react";
 import styled from "styled-components";
+
+// Imported components
 import ColoredSquare from "./ColoredSquare";
 
 const StyledProgressGlossary = styled.div`

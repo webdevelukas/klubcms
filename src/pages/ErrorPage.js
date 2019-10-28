@@ -1,13 +1,16 @@
+// Imported dependencies
 import React from "react";
 import styled from "styled-components";
-import Button from "../components/Button";
+
+// Imported components
 import { ColoredMainArea } from "../components/MainArea";
+import Button from "../components/Button";
 
 const StyledButton = styled(Button)`
-  background: ${props =>
-    props.active ? props.theme.highlightContrast : props.theme.main};
-  box-shadow: ${props =>
-      props.active ? props.theme.main : props.theme.highlightContrast}
+  background: ${({ active, theme }) =>
+    active ? theme.highlightContrast : theme.main};
+  box-shadow: ${({ active, theme }) =>
+      active ? theme.main : theme.highlightContrast}
     3px 3px 0;
 `;
 

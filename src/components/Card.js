@@ -28,7 +28,7 @@ const StyledCard = styled.article`
   grid-gap: 0.2em 0.5em;
   width: 100%;
   height: 180px;
-  background: ${props => props.theme.highlightContrast};
+  background: ${({ theme }) => theme.highlightContrast};
   margin-bottom: 1em;
   padding: 0.6em 0.8em;
 `;

@@ -1,5 +1,8 @@
+// Imported dependencies
 import React from "react";
 import { useHistory } from "react-router-dom";
+
+// Imported components
 import Button from "../components/Button";
 import { ColoredMainArea } from "../components/MainArea";
 
