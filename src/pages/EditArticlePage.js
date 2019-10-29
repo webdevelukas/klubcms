@@ -22,11 +22,23 @@ export default function EditArticlePage({ match }) {
   const [article, setArticle] = useState(false);
   const [events, setEvents] = useState(false);
 
+  function handleSubmit(event) {
+    const data = Object.fromEntries(new FormData(event.target).entries());
+    fetch(`/articles/${articleId}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
+  }
+
   useEffect(() => {
     getArticle(articleId).then(fetchedArticle => setArticle(fetchedArticle));
     getEvents().then(fetchedEvents => {
       setEvents(fetchedEvents);
     });
+
     // eslint-disable-next-line
   }, []);
 
@@ -34,7 +46,8 @@ export default function EditArticlePage({ match }) {
     <>
       <Menu />
       {/* Load MainArea if the content is arrived, otherwise write message "Loading Content" */}
-      {article && events ? (
+      {!article && !events && "Loading Content"}
+      {article && events && (
         <MainArea>
           <h1>What do you want to edit?</h1>
           <hr />
@@ -47,9 +60,9 @@ export default function EditArticlePage({ match }) {
               Date updated: <b>{article.date.updated}</b>
             </div>
           </FunctionBar>
-          <Form>
+          <Form onSubmit={event => handleSubmit(event)}>
             <h2>Event</h2>
-            <DropdownFullWidth defaultValue={article.eventId}>
+            <DropdownFullWidth name="eventId" defaultValue={article.eventId}>
               {events.map(event => {
                 return (
                   <option key={event.id} name={event.name} value={event.id}>
@@ -60,31 +73,30 @@ export default function EditArticlePage({ match }) {
             </DropdownFullWidth>
             <h2>Title</h2>
             <TextareaWithBoldText
+              name="title"
+              type="text"
               placeholder="What are you talking about?"
               defaultValue={article.title}
             />
-            <h2>Text</h2>
+            <h2>Content</h2>
             <Textarea
+              name="content"
+              type="text"
               placeholder="What you wanna tell the people out there?"
               defaultValue={article.content}
             />
             <h2>Photos</h2>
             <Gallery articleGallery={article.media.images.gallery} />
-
-            <Input type="file" multiple />
-
+            <Input name="images" type="file" multiple />
             <hr />
             <Button>Save Article</Button>
           </Form>
         </MainArea>
-      ) : (
-        "Loading Content"
       )}
     </>
   );
 }
 
 EditArticlePage.propTypes = {
-  match: PropTypes.object,
-  article: PropTypes.object
+  match: PropTypes.object
 };
