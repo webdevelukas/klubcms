@@ -1,7 +1,6 @@
 // Imported dependencies / functions
 import React from "react";
 import { useHistory } from "react-router-dom";
-import PropTypes from "prop-types";
 import { getArticles } from "../api/fetch";
 
 // Imported components / icons
@@ -16,10 +15,10 @@ import NewspaperIcon from "../icons/NewspaperIcon";
 
 export default function ArticlesPage() {
   const history = useHistory();
-  const [articles, setArticles] = React.useState([]);
+  const [articles, setArticles] = React.useState(false);
 
-  function linkTo(pathAsString) {
-    history.push(pathAsString);
+  function redirectTo(path) {
+    history.push(path);
   }
 
   React.useEffect(() => {
@@ -27,34 +26,34 @@ export default function ArticlesPage() {
       setArticles(fetchedArticles);
     });
   }, []);
+
   return (
     <>
       <Menu />
-      <MainArea>
-        <h1>
-          Welcome back, Herbert
-          <span role="img" aria-label="waving hand">
-            👋
-          </span>
-        </h1>
-        <SquareButtonWithIcon onClick={() => linkTo("/newarticle")}>
-          <NewspaperIcon />
-          Add Article
-        </SquareButtonWithIcon>
-        <hr />
-        <FunctionBar>
-          <Dropdown>
-            <option>Your Articles</option>
-          </Dropdown>
-          <ProgressGlossary />
-        </FunctionBar>
-        <h2>Your latest articles</h2>
-        <CardList articles={articles} />
-      </MainArea>
+      {!articles && "Loading Content"}
+      {articles && (
+        <MainArea>
+          <h1>
+            Welcome back, Herbert
+            <span role="img" aria-label="waving hand">
+              👋
+            </span>
+          </h1>
+          <SquareButtonWithIcon onClick={() => redirectTo("/articles/new")}>
+            <NewspaperIcon />
+            Add Article
+          </SquareButtonWithIcon>
+          <hr />
+          <FunctionBar>
+            <Dropdown>
+              <option>Your Articles</option>
+            </Dropdown>
+            <ProgressGlossary />
+          </FunctionBar>
+          <h2>Your latest articles</h2>
+          <CardList articles={articles} />
+        </MainArea>
+      )}
     </>
   );
 }
-
-ArticlesPage.propTypes = {
-  articles: PropTypes.array
-};

@@ -21,6 +21,7 @@ const StyledButton = styled.button`
   width: fit-content;
   margin: 1rem;
   cursor: pointer;
+  font-family: inherit;
 `;
 
 // Styling for buttons with an icon on the left or right

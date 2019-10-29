@@ -16,6 +16,7 @@ const Dropdown = styled.select`
   height: 40px;
   border-radius: 0;
   cursor: pointer;
+  font-family: inherit;
 `;
 
 export const DropdownFullWidth = styled(Dropdown)`

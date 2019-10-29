@@ -17,9 +17,6 @@
     "storybook": "start-storybook -p 9009 -s public",
     "fake-api": "json-server --watch db.json"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -42,5 +39,6 @@
     "eslint-plugin-react": "^7.16.0",
     "prettier": "^1.18.2",
     "prop-types": "^15.7.2"
-  }
+  },
+  "proxy": "http://localhost:3000"
 }
