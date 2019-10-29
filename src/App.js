@@ -27,12 +27,12 @@ function App() {
       <GlobalStyles />
       <StyledApp>
         <Router>
-          <Route path="/" exact component={ArticlesPage} />
-          <Route exact path="/newarticle" component={NewArticlePage} />
+          <Route exact path="/" component={ArticlesPage} />
+          <Route exact path="/articles/new" component={NewArticlePage} />
           <Route exact path="/login" component={LoginPage} />
           <Route exact path="/submit" component={SubmitPage} />
           <Route exact path="/fault" component={ErrorPage} />
-          <Route path="/editarticle/:articleId" component={EditArticlePage} />
+          <Route path="/articles/edit/:articleId" component={EditArticlePage} />
         </Router>
       </StyledApp>
     </ThemeProvider>

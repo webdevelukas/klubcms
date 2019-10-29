@@ -46,7 +46,6 @@ h3 {
 }
 
 button, input, select, textarea {
-  font-family : inherit;
   font-size: 1rem;
   border: none;
 

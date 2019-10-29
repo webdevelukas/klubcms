@@ -36,8 +36,8 @@ const StyledCard = styled.article`
 export default function Card({ article }) {
   const history = useHistory();
 
-  function linkTo(pathAsString) {
-    history.push(pathAsString);
+  function redirectTo(path) {
+    history.push(path);
   }
 
   return (
@@ -70,7 +70,7 @@ export default function Card({ article }) {
           Last Update: {article.date.updated}
         </DateOfLatestUpdate>
         <SquareCardButtonWithIcon
-          onClick={() => linkTo(`/editarticle/${article.id}`)}
+          onClick={() => redirectTo(`/articles/edit/${article.id}`)}
         >
           <WrenchIcon />
           Edit

@@ -1,9 +1,7 @@
 // Imported dependencies
-import React from "react";
 import styled from "styled-components";
-import PropTypes from "prop-types";
 
-const StyledUIElement = styled.div`
+const UIElement = styled.div`
   display: inline-grid;
   justify-items: center;
   align-items: center;
@@ -17,7 +15,7 @@ const StyledUIElement = styled.div`
   }
 `;
 
-export const UIElementIconTop = styled(StyledUIElement)`
+export const UIElementIconTop = styled(UIElement)`
   grid-template-rows: 2em 1em;
   svg {
     width: 3em;
@@ -25,19 +23,12 @@ export const UIElementIconTop = styled(StyledUIElement)`
   }
 `;
 
-export const UIElementIconLeft = styled(StyledUIElement)`
+export const UIElementIconLeft = styled(UIElement)`
   grid-template-columns: 0.5fr 1fr;
 `;
 
-export const UIElementIconRight = styled(StyledUIElement)`
+export const UIElementIconRight = styled(UIElement)`
   grid-template-columns: 1fr 1fr;
 `;
 
-export default function UIElement({ onClick, children }) {
-  return <StyledUIElement onClick={onClick}>{children}</StyledUIElement>;
-}
-
-UIElement.propTypes = {
-  onClick: PropTypes.func,
-  children: PropTypes.node
-};
+export default UIElement;
