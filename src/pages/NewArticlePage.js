@@ -1,5 +1,6 @@
 // Imported dependencies
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 
 // Imported components
 import MainArea from "../components/MainArea";
@@ -13,8 +14,17 @@ import Form from "../components/Form";
 import { getEvents } from "../api/fetch";
 import { articleTemplate } from "../api/articleTemplate";
 
+// Imported data
+import { paths } from "../lib/paths";
+import { todaysDate } from "../lib/date";
+
 export default function NewArticlePage() {
+  const history = useHistory();
   const [events, setEvents] = useState(false);
+
+  function redirectTo(path) {
+    history.push(path);
+  }
 
   function handleSubmit(event) {
     const formData = Object.fromEntries(new FormData(event.target).entries());
@@ -26,6 +36,7 @@ export default function NewArticlePage() {
       },
       body: JSON.stringify(data)
     });
+    redirectTo(paths.submitPage);
   }
 
   useEffect(() => {
@@ -45,7 +56,7 @@ export default function NewArticlePage() {
           <hr />
           <FunctionBar>
             <div>
-              Date: <b>12.10.2019</b>
+              Date: <b>{todaysDate}</b>
             </div>
           </FunctionBar>
           <h2>Event</h2>

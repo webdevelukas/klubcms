@@ -13,6 +13,9 @@ import MainArea from "../components/MainArea";
 import Dropdown from "../components/Dropdown";
 import NewspaperIcon from "../icons/NewspaperIcon";
 
+// Imported data
+import { paths } from "../lib/paths";
+
 export default function ArticlesPage() {
   const history = useHistory();
   const [articles, setArticles] = React.useState(false);
@@ -39,7 +42,9 @@ export default function ArticlesPage() {
               👋
             </span>
           </h1>
-          <SquareButtonWithIcon onClick={() => redirectTo("/articles/new")}>
+          <SquareButtonWithIcon
+            onClick={() => redirectTo(paths.newArticlePage)}
+          >
             <NewspaperIcon />
             Add Article
           </SquareButtonWithIcon>

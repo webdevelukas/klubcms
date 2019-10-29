@@ -13,6 +13,9 @@ import NewArticlePage from "./pages/NewArticlePage";
 import EditArticlePage from "./pages/EditArticlePage";
 import SubmitPage from "./pages/SubmitPage";
 
+// Imported data
+import { paths } from "./lib/paths";
+
 const StyledApp = styled.div`
   height: 100vh;
   display: grid;
@@ -27,12 +30,16 @@ function App() {
       <GlobalStyles />
       <StyledApp>
         <Router>
-          <Route exact path="/" component={ArticlesPage} />
-          <Route exact path="/articles/new" component={NewArticlePage} />
-          <Route exact path="/login" component={LoginPage} />
-          <Route exact path="/submit" component={SubmitPage} />
-          <Route exact path="/fault" component={ErrorPage} />
-          <Route path="/articles/edit/:articleId" component={EditArticlePage} />
+          <Route exact path={paths.home} component={ArticlesPage} />
+          <Route exact path={paths.articlesPage} component={ArticlesPage} />
+          <Route exact path={paths.newArticlePage} component={NewArticlePage} />
+          <Route exact path={paths.loginPage} component={LoginPage} />
+          <Route exact path={paths.submitPage} component={SubmitPage} />
+          <Route exact path={paths.errorPage} component={ErrorPage} />
+          <Route
+            path={`${paths.editArticlePage}/:articleId`}
+            component={EditArticlePage}
+          />
         </Router>
       </StyledApp>
     </ThemeProvider>

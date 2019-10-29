@@ -9,6 +9,9 @@ import MenuListItem from "./MenuListItem";
 import { UIElementIconRight } from "./UIElement";
 import LogoutPowerIcon from "../icons/LogoutPowerIcon";
 
+// Imported data
+import { paths } from "../lib/paths";
+
 const StyledNav = styled.nav`
   z-index: 100;
   padding: 70px 0 1rem;
@@ -39,8 +42,8 @@ const StyledMenuList = styled.ul`
 export default function MenuList({ open }) {
   const history = useHistory();
 
-  function linkTo(pathAsString) {
-    history.push(pathAsString);
+  function redirectTo(path) {
+    history.push(path);
   }
 
   return (
@@ -49,14 +52,14 @@ export default function MenuList({ open }) {
         <NavLink to="/" exact activeClassName="selected">
           <MenuListItem>Articles</MenuListItem>
         </NavLink>
-        {/* <NavLink to="/editarticle" activeClassName="selected">
+        {/* <NavLink to="/articles/edit" activeClassName="selected">
           <MenuListItem>Edit Article</MenuListItem>
         </NavLink> */}
-        <NavLink to="/newarticle" activeClassName="selected">
+        <NavLink to="/articles/new" activeClassName="selected">
           <MenuListItem>New Article</MenuListItem>
         </NavLink>
       </StyledMenuList>
-      <UIElementIconRight onClick={() => linkTo("/login")}>
+      <UIElementIconRight onClick={() => redirectTo(paths.loginPage)}>
         Logout
         <LogoutPowerIcon />
       </UIElementIconRight>
