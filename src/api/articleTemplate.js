@@ -2,17 +2,18 @@ export const articleTemplate = {
   id: "",
   eventId: "",
   title: "",
-  author: "",
+  author: "Peter Zwegert",
   date: {
-    added: "",
-    updated: "",
+    added: "01.01.1990",
+    updated: "01.01.1990",
     published: ""
   },
-  categories: [],
+  categories: ["Volleyball", "Damen", "2. Mannschaft"],
   content: "",
   media: {
     images: {
-      main: "",
+      main:
+        "https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
       gallery: []
     },
     videos: [],
