@@ -24,6 +24,7 @@ export default function EditArticlePage({ match }) {
 
   function handleSubmit(event) {
     const data = Object.fromEntries(new FormData(event.target).entries());
+
     fetch(`/articles/${articleId}`, {
       method: "PATCH",
       headers: {

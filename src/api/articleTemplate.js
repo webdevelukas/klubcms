@@ -1,11 +1,14 @@
+// Imported data
+import { todaysDate } from "../lib/date";
+
 export const articleTemplate = {
   id: "",
   eventId: "",
   title: "",
   author: "Peter Zwegert",
   date: {
-    added: "01.01.1990",
-    updated: "01.01.1990",
+    added: todaysDate,
+    updated: todaysDate,
     published: ""
   },
   categories: ["Volleyball", "Damen", "2. Mannschaft"],

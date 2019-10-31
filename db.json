@@ -1,120 +1,9 @@
 {
   "articles": [
     {
-      "id": "1",
+      "id": 1,
       "eventId": "1",
-      "title": "Klasse Spiel unserer U9 gegen den amtierenden Meister - Hallo Juergen!!!",
-      "author": "herbert",
-      "date": {
-        "added": "25.09.2019",
-        "updated": "11.10.2019",
-        "published": ""
-      },
-      "categories": [
-        "Fussball",
-        "Junioren",
-        "U9"
-      ],
-      "content": "Aber der Reihe nach: Am vorletzen Spieltag der Saison 2018/19 ging es mit einem 5 Punkte Vorsprung vor der SpVgg Zolling zum TSV Au II. Wir konnten uns also mit einem Sieg die vorzeitige Meisterschaft sichern.",
-      "media": {
-        "images": {
-          "main": "https://images.unsplash.com/photo-1508087625439-de3978963553?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80",
-          "gallery": [
-            "https://images.unsplash.com/photo-1518657205760-dafa7ef924de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
-            "https://images.unsplash.com/photo-1554331468-3d4032983519?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
-          ]
-        },
-        "videos": [
-          "videoId1",
-          "videoId2",
-          "videoId3"
-        ],
-        "audio": [
-          "audioId1",
-          "audioId2",
-          "audioId3"
-        ]
-      },
-      "images": {}
-    },
-    {
-      "id": "2",
-      "eventId": "2",
-      "title": "Klasse Spiel unserer U9 gegen den amtierenden Meister",
-      "author": "userId1",
-      "date": {
-        "added": "25.09.2019",
-        "updated": "11.10.2019",
-        "published": ""
-      },
-      "categories": [
-        "Fussball",
-        "Junioren",
-        "U9"
-      ],
-      "content": "Aber der Reihe nach: Am vorletzen Spieltag der Saison 2018/19 ging es mit einem 5 Punkte Vorsprung vor der SpVgg Zolling zum TSV Au II. Wir konnten uns also mit einem Sieg die vorzeitige Meisterschaft sichern.",
-      "media": {
-        "images": {
-          "main": "https://images.unsplash.com/photo-1508087625439-de3978963553?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80",
-          "gallery": [
-            "https://images.unsplash.com/photo-1518657205760-dafa7ef924de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
-            "https://images.unsplash.com/photo-1554331468-3d4032983519?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
-          ]
-        },
-        "videos": [
-          "videoId1",
-          "videoId2",
-          "videoId3"
-        ],
-        "audio": [
-          "audioId1",
-          "audioId2",
-          "audioId3"
-        ]
-      }
-    },
-    {
-      "id": "3",
-      "eventId": "3",
-      "title": "Klasse Spiel unserer U9 gegen den amtierenden Meister",
-      "author": "userId1",
-      "date": {
-        "added": "25.09.2019",
-        "updated": "11.10.2019",
-        "published": "02.10.2019"
-      },
-      "categories": [
-        "Fussball",
-        "Junioren",
-        "U9"
-      ],
-      "content": "Aber der Reihe nach: Am vorletzen Spieltag der Saison 2018/19 ging es mit einem 5 Punkte Vorsprung vor der SpVgg Zolling zum TSV Au II. Wir konnten uns also mit einem Sieg die vorzeitige Meisterschaft sichern. Aber der Reihe nach: Am vorletzen Spieltag der Saison 2018/19 ging es mit einem 5 Punkte Vorsprung vor der SpVgg Zolling zum TSV Au II. Wir konnten uns also mit einem Sieg die vorzeitige Meisterschaft sichern. Aber der Reihe nach: Am vorletzen Spieltag der Saison 2018/19 ging es mit einem 5 Punkte Vorsprung vor der SpVgg Zolling zum TSV Au II. Wir konnten uns also mit einem Sieg die vorzeitige Meisterschaft sichern.",
-      "media": {
-        "images": {
-          "main": "https://images.unsplash.com/photo-1508087625439-de3978963553?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1952&q=80",
-          "gallery": [
-            "https://images.unsplash.com/photo-1518657205760-dafa7ef924de?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
-            "https://images.unsplash.com/photo-1554331468-3d4032983519?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-            "https://images.unsplash.com/photo-1543326727-cf6c39e8f84c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60",
-            "https://images.unsplash.com/photo-1524748969064-cf3dabd7b84d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
-          ]
-        },
-        "videos": [
-          "videoId1",
-          "videoId2",
-          "videoId3"
-        ],
-        "audio": [
-          "audioId1",
-          "audioId2",
-          "audioId3"
-        ]
-      }
-    },
-    {
-      "id": "eebfnUc",
-      "eventId": "1",
-      "title": "asdasd",
+      "title": "Tescht Article",
       "author": "Peter Zwegert",
       "date": {
         "added": "01.01.1990",
@@ -126,7 +15,7 @@
         "Damen",
         "2. Mannschaft"
       ],
-      "content": "sadasda",
+      "content": "Hallo, was geht ab!",
       "media": {
         "images": {
           "main": "https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
@@ -138,9 +27,9 @@
       "images": {}
     },
     {
-      "id": "2fLOK_V",
-      "eventId": "1",
-      "title": "afasdfds",
+      "id": 2,
+      "eventId": "3",
+      "title": "Halloudri",
       "author": "Peter Zwegert",
       "date": {
         "added": "01.01.1990",
@@ -152,7 +41,160 @@
         "Damen",
         "2. Mannschaft"
       ],
-      "content": "asdfasdfas",
+      "content": "adks;faskdfasdf",
+      "media": {
+        "images": {
+          "main": "https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+          "gallery": []
+        },
+        "videos": [],
+        "audio": []
+      },
+      "images": {}
+    },
+    {
+      "id": 3,
+      "eventId": "2",
+      "title": "Super Duper",
+      "author": "Peter Zwegert",
+      "date": {
+        "added": "01.01.1990",
+        "updated": "01.01.1990",
+        "published": ""
+      },
+      "categories": [
+        "Volleyball",
+        "Damen",
+        "2. Mannschaft"
+      ],
+      "content": "Wow is fritt a kow!",
+      "media": {
+        "images": {
+          "main": "https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+          "gallery": []
+        },
+        "videos": [],
+        "audio": []
+      },
+      "images": {}
+    },
+    {
+      "id": 4,
+      "eventId": "2",
+      "title": "Oder Wat? Noe!",
+      "author": "Peter Zwegert",
+      "date": {
+        "added": "01.01.1990",
+        "updated": "01.01.1990",
+        "published": ""
+      },
+      "categories": [
+        "Volleyball",
+        "Damen",
+        "2. Mannschaft"
+      ],
+      "content": "Super klasse!!",
+      "media": {
+        "images": {
+          "main": "https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+          "gallery": []
+        },
+        "videos": [],
+        "audio": []
+      },
+      "images": {}
+    },
+    {
+      "id": 5,
+      "eventId": "1",
+      "title": "",
+      "author": "Peter Zwegert",
+      "date": {
+        "updated": "01.01.1990",
+        "published": ""
+      },
+      "categories": [
+        "Volleyball",
+        "Damen",
+        "2. Mannschaft"
+      ],
+      "content": "",
+      "media": {
+        "images": {
+          "main": "https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+          "gallery": []
+        },
+        "videos": [],
+        "audio": []
+      },
+      "images": {}
+    },
+    {
+      "id": 6,
+      "eventId": "1",
+      "title": "asdfas",
+      "author": "Peter Zwegert",
+      "date": {
+        "updated": "01.01.1990",
+        "published": ""
+      },
+      "categories": [
+        "Volleyball",
+        "Damen",
+        "2. Mannschaft"
+      ],
+      "content": "asdfasf",
+      "media": {
+        "images": {
+          "main": "https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+          "gallery": []
+        },
+        "videos": [],
+        "audio": []
+      },
+      "images": {}
+    },
+    {
+      "id": 7,
+      "eventId": "1",
+      "title": "adfa",
+      "author": "Peter Zwegert",
+      "date": {
+        "updated": "01.01.1990",
+        "published": ""
+      },
+      "categories": [
+        "Volleyball",
+        "Damen",
+        "2. Mannschaft"
+      ],
+      "content": "",
+      "media": {
+        "images": {
+          "main": "https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+          "gallery": []
+        },
+        "videos": [],
+        "audio": []
+      },
+      "images": {}
+    },
+    {
+      "id": 8,
+      "eventId": "1",
+      "title": "adfasdfas",
+      "author": "Peter Zwegert",
+      "date": {
+        "added": "2.9.2019",
+        "updated": "01.01.1990",
+        "published": ""
+      },
+      "categories": [
+        "Volleyball",
+        "Damen",
+        "2. Mannschaft"
+      ],
+      "content": "asdfas",
       "media": {
         "images": {
           "main": "https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",

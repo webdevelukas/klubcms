@@ -16,6 +16,9 @@ import DateOfLatestUpdate from "./DateOfLatestUpdate";
 import { SquareCardButtonWithIcon } from "./Button";
 import WrenchIcon from "../icons/WrenchIcon";
 
+// Imported data
+import { paths } from "../lib/paths";
+
 const StyledCard = styled.article`
   display: grid;
   grid-template-areas:
@@ -70,7 +73,7 @@ export default function Card({ article }) {
           Last Update: {article.date.updated}
         </DateOfLatestUpdate>
         <SquareCardButtonWithIcon
-          onClick={() => redirectTo(`/articles/edit/${article.id}`)}
+          onClick={() => redirectTo(`${paths.editArticlePage}/${article.id}`)}
         >
           <WrenchIcon />
           Edit
