@@ -1,7 +1,7 @@
 // Imported dependencies / functions
 import React from "react";
 import { useHistory } from "react-router-dom";
-import { getArticles } from "../api/fetch";
+import { getArticles } from "../api/articles";
 
 // Imported components / icons
 import Menu from "../components/Menu";

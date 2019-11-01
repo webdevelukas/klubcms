@@ -2,7 +2,8 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import useGetArticle from "../hooks/useGetArticle";
-import { getEvents } from "../api/fetch";
+import { getEvents } from "../api/events";
+import { handlePatchArticle } from "../lib/handlePatchArticle";
 
 // Imported components
 import MainArea from "../components/MainArea";
@@ -16,8 +17,9 @@ import Form from "../components/Form";
 import Input from "../components/Input";
 
 export default function EditArticlePage({ match }) {
-  const [{ article }, handleSubmit] = useGetArticle({ match });
+  const articleId = match.params.articleId;
 
+  const article = useGetArticle(articleId);
   const [events, setEvents] = useState(false);
 
   useEffect(() => {
@@ -45,7 +47,7 @@ export default function EditArticlePage({ match }) {
               Date updated: <b>{article.date.updated}</b>
             </div>
           </FunctionBar>
-          <Form onSubmit={event => handleSubmit(event)}>
+          <Form onSubmit={event => handlePatchArticle(event, articleId)}>
             <h2>Event</h2>
             <DropdownFullWidth name="eventId" defaultValue={article.eventId}>
               {events.map(event => {
