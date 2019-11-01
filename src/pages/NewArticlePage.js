@@ -1,6 +1,7 @@
 // Imported dependencies
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
+import useGetEvents from "../hooks/useGetEvents";
 
 // Imported components
 import MainArea from "../components/MainArea";
@@ -11,7 +12,6 @@ import Textarea, { TextareaWithBoldText } from "../components/Textarea";
 import { DropdownFullWidth } from "../components/Dropdown";
 import Input from "../components/Input";
 import Form from "../components/Form";
-import { getEvents } from "../api/fetch";
 import { articleTemplate } from "../api/articleTemplate";
 
 // Imported data
@@ -20,7 +20,7 @@ import { todaysDate } from "../lib/date";
 
 export default function NewArticlePage() {
   const history = useHistory();
-  const [events, setEvents] = useState(false);
+  const events = useGetEvents();
 
   function redirectTo(path) {
     history.push(path);
@@ -39,12 +39,6 @@ export default function NewArticlePage() {
     redirectTo(paths.submitPage);
   }
 
-  useEffect(() => {
-    getEvents().then(fetchedEvents => {
-      setEvents(fetchedEvents);
-    });
-    // eslint-disable-next-line
-  }, []);
   return (
     <>
       <Menu />

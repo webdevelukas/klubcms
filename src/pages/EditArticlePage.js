@@ -1,7 +1,8 @@
 // Imported dependencies / functions
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { getArticle, getEvents } from "../api/fetch";
+import useGetEvents from "../hooks/useGetEvents";
+import { getArticle } from "../api/fetch";
 
 // Imported components
 import MainArea from "../components/MainArea";
@@ -20,7 +21,7 @@ export default function EditArticlePage({ match }) {
   } = match;
 
   const [article, setArticle] = useState(false);
-  const [events, setEvents] = useState(false);
+  const events = useGetEvents();
 
   function handleSubmit(event) {
     const data = Object.fromEntries(new FormData(event.target).entries());
@@ -36,9 +37,6 @@ export default function EditArticlePage({ match }) {
 
   useEffect(() => {
     getArticle(articleId).then(fetchedArticle => setArticle(fetchedArticle));
-    getEvents().then(fetchedEvents => {
-      setEvents(fetchedEvents);
-    });
 
     // eslint-disable-next-line
   }, []);
