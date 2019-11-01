@@ -10,9 +10,9 @@ import FunctionBar from "../components/FunctionBar";
 import Button from "../components/Button";
 import Textarea, { TextareaWithBoldText } from "../components/Textarea";
 import Gallery from "../components/Gallery";
-import { DropdownFullWidth } from "../components/Dropdown";
 import Form from "../components/Form";
 import Input from "../components/Input";
+import EventsDropdown from "../components/EventsDropdown";
 
 export default function EditArticlePage({ match }) {
   const {
@@ -63,15 +63,7 @@ export default function EditArticlePage({ match }) {
           </FunctionBar>
           <Form onSubmit={event => handleSubmit(event)}>
             <h2>Event</h2>
-            <DropdownFullWidth name="eventId" defaultValue={article.eventId}>
-              {events.map(event => {
-                return (
-                  <option key={event.id} name={event.name} value={event.id}>
-                    {event.date} :: {event.name}
-                  </option>
-                );
-              })}
-            </DropdownFullWidth>
+            <EventsDropdown defaultValue={article.eventId} />
             <h2>Title</h2>
             <TextareaWithBoldText
               name="title"
