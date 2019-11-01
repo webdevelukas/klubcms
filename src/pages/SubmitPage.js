@@ -1,6 +1,6 @@
 // Imported dependencies
 import React from "react";
-import { useHistory } from "react-router-dom";
+import useRedirectTo from "../hooks/useRedirectTo";
 
 // Imported components
 import Button from "../components/Button";
@@ -10,11 +10,7 @@ import { ColoredMainArea } from "../components/MainArea";
 import { paths } from "../lib/paths";
 
 export default function SubmitPage() {
-  const history = useHistory();
-
-  function redirectTo(path) {
-    history.push(path);
-  }
+  const redirectTo = useRedirectTo();
 
   return (
     <ColoredMainArea bgColor={({ theme }) => theme.main}>

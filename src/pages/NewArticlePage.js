@@ -1,6 +1,6 @@
 // Imported dependencies
 import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
+import useRedirectTo from "../hooks/useRedirectTo";
 
 // Imported components
 import MainArea from "../components/MainArea";
@@ -19,12 +19,8 @@ import { paths } from "../lib/paths";
 import { todaysDate } from "../lib/date";
 
 export default function NewArticlePage() {
-  const history = useHistory();
+  const redirectTo = useRedirectTo();
   const [events, setEvents] = useState(false);
-
-  function redirectTo(path) {
-    history.push(path);
-  }
 
   function handleSubmit(event) {
     const formData = Object.fromEntries(new FormData(event.target).entries());

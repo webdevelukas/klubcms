@@ -2,7 +2,7 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { useHistory } from "react-router-dom";
+import useRedirectTo from "../hooks/useRedirectTo";
 
 // Imported components / icons
 import { CardImage } from "./Image";
@@ -37,11 +37,7 @@ const StyledCard = styled.article`
 `;
 
 export default function Card({ article }) {
-  const history = useHistory();
-
-  function redirectTo(path) {
-    history.push(path);
-  }
+  const redirectTo = useRedirectTo();
 
   return (
     <>
