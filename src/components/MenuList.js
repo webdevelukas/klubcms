@@ -2,7 +2,8 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { useHistory, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import useRedirectTo from "../hooks/useRedirectTo";
 
 // Imported components / icons
 import MenuListItem from "./MenuListItem";
@@ -40,16 +41,12 @@ const StyledMenuList = styled.ul`
 `;
 
 export default function MenuList({ open }) {
-  const history = useHistory();
-
-  function redirectTo(path) {
-    history.push(path);
-  }
+  const redirectTo = useRedirectTo();
 
   return (
     <StyledNav open={open}>
       <StyledMenuList>
-        <NavLink to="/" exact activeClassName="selected">
+        <NavLink to="/articles" exact activeClassName="selected">
           <MenuListItem>Articles</MenuListItem>
         </NavLink>
         {/* <NavLink to="/articles/edit" activeClassName="selected">
