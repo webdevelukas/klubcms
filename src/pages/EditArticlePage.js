@@ -1,7 +1,8 @@
 // Imported dependencies / functions
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { getArticle, getEvents } from "../api/fetch";
+import useGetArticle from "../hooks/useGetArticle";
+import { getEvents } from "../api/fetch";
 
 // Imported components
 import MainArea from "../components/MainArea";
@@ -15,31 +16,14 @@ import Form from "../components/Form";
 import Input from "../components/Input";
 
 export default function EditArticlePage({ match }) {
-  const {
-    params: { articleId }
-  } = match;
+  const [{ article }, handleSubmit] = useGetArticle({ match });
 
-  const [article, setArticle] = useState(false);
   const [events, setEvents] = useState(false);
 
-  function handleSubmit(event) {
-    const data = Object.fromEntries(new FormData(event.target).entries());
-
-    fetch(`/articles/${articleId}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    });
-  }
-
   useEffect(() => {
-    getArticle(articleId).then(fetchedArticle => setArticle(fetchedArticle));
     getEvents().then(fetchedEvents => {
       setEvents(fetchedEvents);
     });
-
     // eslint-disable-next-line
   }, []);
 
