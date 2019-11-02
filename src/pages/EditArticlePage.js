@@ -1,7 +1,11 @@
-// Imported dependencies / functions
-import React, { useState, useEffect } from "react";
+// Imported dependencies
+import React from "react";
 import PropTypes from "prop-types";
-import { getArticle, getEvents } from "../api/fetch";
+import useGetEvents from "../hooks/useGetEvents";
+import useGetArticle from "../hooks/useGetArticle";
+
+// Imported functions
+import { handlePatchArticle } from "../lib/handlePatchArticle";
 
 // Imported components
 import MainArea from "../components/MainArea";
@@ -15,33 +19,10 @@ import Input from "../components/Input";
 import EventsDropdown from "../components/EventsDropdown";
 
 export default function EditArticlePage({ match }) {
-  const {
-    params: { articleId }
-  } = match;
+  const articleId = match.params.articleId;
 
-  const [article, setArticle] = useState(false);
-  const [events, setEvents] = useState(false);
-
-  function handleSubmit(event) {
-    const data = Object.fromEntries(new FormData(event.target).entries());
-
-    fetch(`/articles/${articleId}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    });
-  }
-
-  useEffect(() => {
-    getArticle(articleId).then(fetchedArticle => setArticle(fetchedArticle));
-    getEvents().then(fetchedEvents => {
-      setEvents(fetchedEvents);
-    });
-
-    // eslint-disable-next-line
-  }, []);
+  const article = useGetArticle(articleId);
+  const events = useGetEvents();
 
   return (
     <>
@@ -61,7 +42,7 @@ export default function EditArticlePage({ match }) {
               Date updated: <b>{article.date.updated}</b>
             </div>
           </FunctionBar>
-          <Form onSubmit={event => handleSubmit(event)}>
+          <Form onSubmit={event => handlePatchArticle(event, articleId)}>
             <h2>Event</h2>
             <EventsDropdown defaultValue={article.eventId} />
             <h2>Title</h2>

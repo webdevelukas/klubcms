@@ -1,6 +1,9 @@
 // Imported dependencies
-import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
+import React from "react";
+import useGetEvents from "../hooks/useGetEvents";
+
+// Imported functions
+import { handlePostArticle } from "../lib/handlePostArticle";
 
 // Imported components
 import MainArea from "../components/MainArea";
@@ -11,40 +14,13 @@ import Textarea, { TextareaWithBoldText } from "../components/Textarea";
 import EventsDropdown from "../components/EventsDropdown";
 import Input from "../components/Input";
 import Form from "../components/Form";
-import { getEvents } from "../api/fetch";
-import { articleTemplate } from "../api/articleTemplate";
 
 // Imported data
-import { paths } from "../lib/paths";
 import { todaysDate } from "../lib/date";
 
 export default function NewArticlePage() {
-  const history = useHistory();
-  const [events, setEvents] = useState(false);
+  const events = useGetEvents();
 
-  function redirectTo(path) {
-    history.push(path);
-  }
-
-  function handleSubmit(event) {
-    const formData = Object.fromEntries(new FormData(event.target).entries());
-    const data = Object.assign(articleTemplate, formData);
-    fetch(`/articles`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    });
-    redirectTo(paths.submitPage);
-  }
-
-  useEffect(() => {
-    getEvents().then(fetchedEvents => {
-      setEvents(fetchedEvents);
-    });
-    // eslint-disable-next-line
-  }, []);
   return (
     <>
       <Menu />
@@ -60,7 +36,7 @@ export default function NewArticlePage() {
             </div>
           </FunctionBar>
           <h2>Event</h2>
-          <Form onSubmit={event => handleSubmit(event)}>
+          <Form onSubmit={event => handlePostArticle(event)}>
             <EventsDropdown />
             <h2>Title</h2>
             <TextareaWithBoldText
