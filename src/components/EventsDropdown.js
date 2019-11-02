@@ -1,15 +1,13 @@
 // Imported dependencies
 import React from "react";
-import useGetEvents from "../hooks/useGetEvents";
+import PropTypes from "prop-types";
 
 // Imported components
 import { DropdownFullWidth } from "./Dropdown";
 
-export default function EventsDropdown() {
-  const events = useGetEvents();
-
+export default function EventsDropdown({ events, ...props }) {
   return (
-    <DropdownFullWidth name="eventId">
+    <DropdownFullWidth name="eventId" {...props}>
       {events.map(event => {
         return (
           <option key={event.id} name={event.name} value={event.id}>
@@ -20,3 +18,7 @@ export default function EventsDropdown() {
     </DropdownFullWidth>
   );
 }
+
+EventsDropdown.propTypes = {
+  events: PropTypes.array
+};

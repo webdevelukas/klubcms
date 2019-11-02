@@ -37,7 +37,7 @@ export default function NewArticlePage() {
           </FunctionBar>
           <h2>Event</h2>
           <Form onSubmit={event => handlePostArticle(event)}>
-            <EventsDropdown />
+            <EventsDropdown events={events} />
             <h2>Title</h2>
             <TextareaWithBoldText
               name="title"

@@ -44,7 +44,7 @@ export default function EditArticlePage({ match }) {
           </FunctionBar>
           <Form onSubmit={event => handlePatchArticle(event, articleId)}>
             <h2>Event</h2>
-            <EventsDropdown defaultValue={article.eventId} />
+            <EventsDropdown events={events} defaultValue={article.eventId} />
             <h2>Title</h2>
             <TextareaWithBoldText
               name="title"
