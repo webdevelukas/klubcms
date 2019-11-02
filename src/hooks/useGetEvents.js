@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getEvents } from "../api/fetch";
+import { getEvents } from "../api/events";
 
 export default function useGetEvents() {
   const [events, setEvents] = useState(false);
