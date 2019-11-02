@@ -204,58 +204,6 @@
         "audio": []
       },
       "images": {}
-    },
-    {
-      "id": 9,
-      "eventId": "1",
-      "title": "hallo aaron!!!!",
-      "author": "Peter Zwegert",
-      "date": {
-        "added": "4.9.2019",
-        "updated": "4.9.2019",
-        "published": ""
-      },
-      "categories": [
-        "Volleyball",
-        "Damen",
-        "2. Mannschaft"
-      ],
-      "content": "jhlgyuigokyugkygkgkjgy",
-      "media": {
-        "images": {
-          "main": "https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
-          "gallery": []
-        },
-        "videos": [],
-        "audio": []
-      },
-      "images": {}
-    },
-    {
-      "id": 10,
-      "eventId": "2",
-      "title": "kjahdjsfkjahsfdsf",
-      "author": "Peter Zwegert",
-      "date": {
-        "added": "5.10.2019",
-        "updated": "5.10.2019",
-        "published": ""
-      },
-      "categories": [
-        "Volleyball",
-        "Damen",
-        "2. Mannschaft"
-      ],
-      "content": "fasdfasdfasdfasd",
-      "media": {
-        "images": {
-          "main": "https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
-          "gallery": []
-        },
-        "videos": [],
-        "audio": []
-      },
-      "images": {}
     }
   ],
   "events": [
