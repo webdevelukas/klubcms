@@ -1,3 +1,4 @@
+// Imported dependencies
 import { useEffect, useState } from "react";
 import { getEvents } from "../api/events";
 
