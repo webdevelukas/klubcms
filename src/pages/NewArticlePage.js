@@ -1,7 +1,9 @@
 // Imported dependencies
 import React from "react";
-import { useHistory } from "react-router-dom";
 import useGetEvents from "../hooks/useGetEvents";
+
+// Imported functions
+import { handlePostArticle } from "../lib/handlePostArticle";
 
 // Imported components
 import MainArea from "../components/MainArea";
@@ -12,32 +14,12 @@ import Textarea, { TextareaWithBoldText } from "../components/Textarea";
 import { DropdownFullWidth } from "../components/Dropdown";
 import Input from "../components/Input";
 import Form from "../components/Form";
-import { articleTemplate } from "../api/articleTemplate";
 
 // Imported data
-import { paths } from "../lib/paths";
 import { todaysDate } from "../lib/date";
 
 export default function NewArticlePage() {
-  const history = useHistory();
   const events = useGetEvents();
-
-  function redirectTo(path) {
-    history.push(path);
-  }
-
-  function handleSubmit(event) {
-    const formData = Object.fromEntries(new FormData(event.target).entries());
-    const data = Object.assign(articleTemplate, formData);
-    fetch(`/articles`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
-    });
-    redirectTo(paths.submitPage);
-  }
 
   return (
     <>
@@ -54,7 +36,7 @@ export default function NewArticlePage() {
             </div>
           </FunctionBar>
           <h2>Event</h2>
-          <Form onSubmit={event => handleSubmit(event)}>
+          <Form onSubmit={event => handlePostArticle(event)}>
             <DropdownFullWidth name="eventId">
               {events.map(event => {
                 return (
