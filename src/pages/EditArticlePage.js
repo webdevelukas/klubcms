@@ -1,8 +1,10 @@
-// Imported dependencies / functions
-import React, { useState, useEffect } from "react";
+// Imported dependencies
+import React from "react";
 import PropTypes from "prop-types";
+import useGetEvents from "../hooks/useGetEvents";
 import useGetArticle from "../hooks/useGetArticle";
-import { getEvents } from "../api/events";
+
+// Imported functions
 import { handlePatchArticle } from "../lib/handlePatchArticle";
 
 // Imported components
@@ -20,14 +22,7 @@ export default function EditArticlePage({ match }) {
   const articleId = match.params.articleId;
 
   const article = useGetArticle(articleId);
-  const [events, setEvents] = useState(false);
-
-  useEffect(() => {
-    getEvents().then(fetchedEvents => {
-      setEvents(fetchedEvents);
-    });
-    // eslint-disable-next-line
-  }, []);
+  const events = useGetEvents();
 
   return (
     <>

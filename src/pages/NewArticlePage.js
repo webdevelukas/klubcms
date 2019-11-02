@@ -1,6 +1,8 @@
-// Imported dependencies / functions
-import React, { useEffect, useState } from "react";
-import { getEvents } from "../api/events";
+// Imported dependencies
+import React from "react";
+import useGetEvents from "../hooks/useGetEvents";
+
+// Imported functions
 import { handlePostArticle } from "../lib/handlePostArticle";
 
 // Imported components
@@ -17,14 +19,8 @@ import Form from "../components/Form";
 import { todaysDate } from "../lib/date";
 
 export default function NewArticlePage() {
-  const [events, setEvents] = useState(false);
+  const events = useGetEvents();
 
-  useEffect(() => {
-    getEvents().then(fetchedEvents => {
-      setEvents(fetchedEvents);
-    });
-    // eslint-disable-next-line
-  }, []);
   return (
     <>
       <Menu />
