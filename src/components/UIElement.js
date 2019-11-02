@@ -29,6 +29,7 @@ export const UIElementIconLeft = styled(UIElement)`
 
 export const UIElementIconRight = styled(UIElement)`
   grid-template-columns: 1fr 1fr;
+  align-self: right;
 `;
 
 export default UIElement;

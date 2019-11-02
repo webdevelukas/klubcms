@@ -1,6 +1,6 @@
 // Imported dependencies / functions
 import React from "react";
-import { useHistory } from "react-router-dom";
+import useRedirectTo from "../hooks/useRedirectTo";
 import { getArticles } from "../api/articles";
 
 // Imported components / icons
@@ -17,12 +17,9 @@ import NewspaperIcon from "../icons/NewspaperIcon";
 import { paths } from "../lib/paths";
 
 export default function ArticlesPage() {
-  const history = useHistory();
-  const [articles, setArticles] = React.useState(false);
+  const redirectTo = useRedirectTo();
 
-  function redirectTo(path) {
-    history.push(path);
-  }
+  const [articles, setArticles] = React.useState(false);
 
   React.useEffect(() => {
     getArticles().then(fetchedArticles => {
