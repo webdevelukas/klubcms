@@ -14,9 +14,9 @@ import FunctionBar from "../components/FunctionBar";
 import Button from "../components/Button";
 import Textarea, { TextareaWithBoldText } from "../components/Textarea";
 import Gallery from "../components/Gallery";
-import { DropdownFullWidth } from "../components/Dropdown";
 import Form from "../components/Form";
 import Input from "../components/Input";
+import EventsDropdown from "../components/EventsDropdown";
 
 export default function EditArticlePage({ match }) {
   const articleId = match.params.articleId;
@@ -44,15 +44,7 @@ export default function EditArticlePage({ match }) {
           </FunctionBar>
           <Form onSubmit={event => handlePatchArticle(event, articleId)}>
             <h2>Event</h2>
-            <DropdownFullWidth name="eventId" defaultValue={article.eventId}>
-              {events.map(event => {
-                return (
-                  <option key={event.id} name={event.name} value={event.id}>
-                    {event.date} :: {event.name}
-                  </option>
-                );
-              })}
-            </DropdownFullWidth>
+            <EventsDropdown events={events} defaultValue={article.eventId} />
             <h2>Title</h2>
             <TextareaWithBoldText
               name="title"

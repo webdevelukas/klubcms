@@ -11,7 +11,7 @@ import Menu from "../components/Menu";
 import FunctionBar from "../components/FunctionBar";
 import Button from "../components/Button";
 import Textarea, { TextareaWithBoldText } from "../components/Textarea";
-import { DropdownFullWidth } from "../components/Dropdown";
+import EventsDropdown from "../components/EventsDropdown";
 import Input from "../components/Input";
 import Form from "../components/Form";
 
@@ -37,15 +37,7 @@ export default function NewArticlePage() {
           </FunctionBar>
           <h2>Event</h2>
           <Form onSubmit={event => handlePostArticle(event)}>
-            <DropdownFullWidth name="eventId">
-              {events.map(event => {
-                return (
-                  <option key={event.id} name={event.name} value={event.id}>
-                    {event.date} :: {event.name}
-                  </option>
-                );
-              })}
-            </DropdownFullWidth>
+            <EventsDropdown events={events} />
             <h2>Title</h2>
             <TextareaWithBoldText
               name="title"
