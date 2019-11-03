@@ -1,7 +1,7 @@
 // Imported dependencies / functions
 import React from "react";
 import useRedirectTo from "../hooks/useRedirectTo";
-import { getArticles } from "../api/articles";
+import useGetArticles from "../hooks/useGetArticles";
 
 // Imported components / icons
 import Menu from "../components/Menu";
@@ -18,14 +18,7 @@ import { paths } from "../lib/paths";
 
 export default function ArticlesPage() {
   const redirectTo = useRedirectTo();
-
-  const [articles, setArticles] = React.useState(false);
-
-  React.useEffect(() => {
-    getArticles().then(fetchedArticles => {
-      setArticles(fetchedArticles);
-    });
-  }, []);
+  const articles = useGetArticles();
 
   return (
     <>
