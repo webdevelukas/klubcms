@@ -23,7 +23,7 @@ export function patchArticle(data, articleId) {
 }
 
 export function postArticle(data) {
-  fetch(`/articles`, {
+  fetch(`/api/articles`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"

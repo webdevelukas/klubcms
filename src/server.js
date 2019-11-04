@@ -8,6 +8,8 @@ const port = 8080;
 const articlesCollectionName = "articles";
 const eventsCollectionName = "events";
 
+app.use(express.json());
+
 app.get(`/api/articles`, async (request, response) => {
   try {
     const articles = await getArticles();
@@ -71,6 +73,25 @@ async function getArticle(articleId) {
   }
 
   return article;
+}
+
+app.post(`/api/articles`, async (request, response) => {
+  try {
+    console.log(request);
+    console.log(request.body);
+    const newArticle = await setArticle(request.body);
+    return response.json(newArticle);
+  } catch (error) {
+    console.error(`Thats the error: ${error}`);
+    return response.end("Error");
+  }
+});
+
+async function setArticle(article) {
+  const articlesCollection = await getCollection(articlesCollectionName);
+  const result = await articlesCollection.insertOne({ ...article });
+
+  return result;
 }
 
 initDatabase().then(() => {

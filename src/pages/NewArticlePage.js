@@ -51,7 +51,7 @@ export default function NewArticlePage() {
               placeholder="What you wanna tell the people out there?"
             />
             <h2>Photos</h2>
-            <Input name="images" type="file" multiple />
+            <Input type="file" multiple />
             <hr />
             <Button>Save article</Button>
           </Form>
