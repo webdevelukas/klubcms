@@ -2,7 +2,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import styled, { ThemeProvider } from "styled-components";
-import defaultTheme from "./themes/default";
+import mainTheme from "./themes/main";
 import GlobalStyles from "./GlobalStyles";
 
 // Imported pages
@@ -26,7 +26,7 @@ const StyledApp = styled.div`
 
 function App() {
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <ThemeProvider theme={mainTheme}>
       <GlobalStyles />
       <StyledApp>
         <Router>

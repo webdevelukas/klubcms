@@ -1,15 +1,13 @@
 import React from "react";
 import { UserImage } from "../components/Image";
 
-import imageFile from "../sample-data/userImage.jpg";
-
-const image = {
-  src: imageFile,
-  alt: "A Face looking into camera"
-};
-
 export default {
   title: "UserImage"
 };
 
-export const Default = () => <UserImage src={image.src} alt={image.alt} />;
+export const Default = () => (
+  <UserImage
+    src="https://images.unsplash.com/photo-1477954417131-efc62c1b25cb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
+    alt={image.alt}
+  />
+);
