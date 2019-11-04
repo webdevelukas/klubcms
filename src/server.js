@@ -9,7 +9,7 @@ const collectionName = "articles";
 app.get(`/api/articles`, async (request, response) => {
   try {
     const articles = await getArticles();
-    return response.json(`Articles: ${articles}`);
+    return response.json(articles);
   } catch (error) {
     console.error(`Thats the error: ${error}`);
     return response.end("Error");
@@ -19,6 +19,8 @@ app.get(`/api/articles`, async (request, response) => {
 async function getArticles() {
   const articlesCollection = await getCollection(collectionName);
   const articles = await articlesCollection.find({}).toArray();
+  console.log(`Articles: ${articles}`);
+
   if (!articles) {
     throw new Error("Can not find articles");
   }

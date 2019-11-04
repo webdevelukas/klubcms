@@ -10,7 +10,6 @@ async function initDatabase() {
   });
   await client.connect();
   db = client.db(dbName);
-  console.log(db);
 }
 
 async function getCollection(collectionName) {
@@ -18,7 +17,6 @@ async function getCollection(collectionName) {
     if (!db) {
       await initDatabase();
     }
-    console.log(db.collection("articles"));
     return db.collection(collectionName);
   } catch (error) {
     console.error(`Thats the error: ${error}`);
