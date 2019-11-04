@@ -13,7 +13,7 @@ export async function getArticle(articleId) {
 }
 
 export function patchArticle(data, articleId) {
-  fetch(`/articles/${articleId}`, {
+  fetch(`/api/articles/${articleId}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json"

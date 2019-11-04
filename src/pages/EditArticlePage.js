@@ -61,7 +61,7 @@ export default function EditArticlePage({ match }) {
             />
             <h2>Photos</h2>
             <Gallery articleGallery={article.media.images.gallery} />
-            <Input name="images" type="file" multiple />
+            <Input type="file" multiple />
             <hr />
             <Button>Save Article</Button>
           </Form>

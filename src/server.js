@@ -75,6 +75,32 @@ async function getArticle(articleId) {
   return article;
 }
 
+app.patch(`/api/articles/:id`, async (request, response) => {
+  try {
+    const articleId = request.params.id;
+    const updates = request.body;
+    const updatedArticle = await updateArticle(articleId, updates);
+    return response.json(updatedArticle);
+  } catch (error) {
+    console.error(`Thats the error: ${error}`);
+    return response.end("Error");
+  }
+});
+
+async function updateArticle(articleId, updates) {
+  const articlesCollection = await getCollection(articlesCollectionName);
+  const article = await articlesCollection.updateOne(
+    { _id: ObjectID(articleId) },
+    { $set: updates }
+  );
+
+  if (!article) {
+    throw new Error("Can not find articles");
+  }
+
+  return article;
+}
+
 app.post(`/api/articles`, async (request, response) => {
   try {
     console.log(request);
