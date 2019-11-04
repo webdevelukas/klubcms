@@ -9,7 +9,7 @@ export default function CardList({ articles }) {
   return (
     <section>
       {articles.map(article => {
-        return <Card key={article.id} article={article} />;
+        return <Card key={article._id} article={article} />;
       })}
     </section>
   );

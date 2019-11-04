@@ -10,7 +10,7 @@ export default function EventsDropdown({ events, ...props }) {
     <DropdownFullWidth name="eventId" {...props}>
       {events.map(event => {
         return (
-          <option key={event.id} name={event.name} value={event.id}>
+          <option key={event._id} name={event.name} value={event._id}>
             {event.date} :: {event.name}
           </option>
         );

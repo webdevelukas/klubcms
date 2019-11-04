@@ -1,12 +1,13 @@
 export async function getArticles() {
-  const articles = await fetch(`api/articles`).then(response =>
+  const articles = await fetch(`/api/articles`).then(response =>
     response.json()
   );
+  console.log(articles);
   return articles;
 }
 
 export async function getArticle(articleId) {
-  const promise = await fetch(`/articles/${articleId}`).then(response =>
+  const promise = await fetch(`/api/articles/${articleId}`).then(response =>
     response.json()
   );
   return promise;
