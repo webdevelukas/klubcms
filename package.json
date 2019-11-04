@@ -17,7 +17,6 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "fake-api": "json-server --watch db.json",
     "server": "nodemon src/server.js"
   },
   "browserslist": {
