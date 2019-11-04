@@ -21,6 +21,8 @@ import EventsDropdown from "../components/EventsDropdown";
 export default function EditArticlePage({ match }) {
   const articleId = match.params.articleId;
 
+  console.log(match.params);
+
   const article = useGetArticle(articleId);
   const events = useGetEvents();
 

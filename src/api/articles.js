@@ -1,6 +1,8 @@
 export async function getArticles() {
-  const promise = await fetch("/articles").then(response => response.json());
-  return promise;
+  const articles = await fetch(`api/articles`).then(response =>
+    response.json()
+  );
+  return articles;
 }
 
 export async function getArticle(articleId) {
