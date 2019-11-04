@@ -2,7 +2,6 @@
 import { todaysDate } from "../lib/date";
 
 export const articleTemplate = {
-  id: "",
   eventId: "",
   title: "",
   author: "Peter Zwegert",

@@ -1,17 +1,19 @@
 export async function getArticles() {
-  const promise = await fetch("/articles").then(response => response.json());
-  return promise;
+  const articles = await fetch(`/api/articles`).then(response =>
+    response.json()
+  );
+  return articles;
 }
 
 export async function getArticle(articleId) {
-  const promise = await fetch(`/articles/${articleId}`).then(response =>
+  const promise = await fetch(`/api/articles/${articleId}`).then(response =>
     response.json()
   );
   return promise;
 }
 
 export function patchArticle(data, articleId) {
-  fetch(`/articles/${articleId}`, {
+  fetch(`/api/articles/${articleId}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json"
@@ -21,7 +23,7 @@ export function patchArticle(data, articleId) {
 }
 
 export function postArticle(data) {
-  fetch(`/articles`, {
+  fetch(`/api/articles`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"

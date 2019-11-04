@@ -69,7 +69,7 @@ export default function Card({ article }) {
           Last Update: {article.date.updated}
         </DateOfLatestUpdate>
         <SquareCardButtonWithIcon
-          onClick={() => redirectTo(`${paths.editArticlePage}/${article.id}`)}
+          onClick={() => redirectTo(`${paths.editArticlePage}/${article._id}`)}
         >
           <WrenchIcon />
           Edit
