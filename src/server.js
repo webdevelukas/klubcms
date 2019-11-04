@@ -64,7 +64,6 @@ app.get(`/api/articles/:id`, async (request, response) => {
 async function getArticle(articleId) {
   const articlesCollection = await getCollection(articlesCollectionName);
   const objectId = new ObjectID.createFromHexString(articleId);
-  console.log(objectId);
   const article = await articlesCollection.findOne({ _id: objectId });
 
   if (!article) {
