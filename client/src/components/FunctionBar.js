@@ -7,7 +7,7 @@ const FunctionBar = styled.section`
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 2em;
+  margin-bottom: 1rem;
 `;
 
 export default FunctionBar;

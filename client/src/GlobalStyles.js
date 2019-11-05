@@ -12,15 +12,19 @@ html {
   font-family: 'Cairo', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: ${({ theme }) => theme.main}
+  color: ${({ theme }) => theme.main};
 }
 
 body {
   height: 100vh;
   width: 100vw;
   margin: 0;
-  background: #e1e1e1;
+  background: ${({ theme }) => theme.light};
   overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  margin: 0 0 0.5rem;
 }
 
 h1 {
@@ -37,7 +41,6 @@ h2 {
   font-size: 1.5rem;
   text-align: center;
   text-transform: uppercase;
-  margin: 1rem 0 0.25rem;
 }
 
 h3 {
@@ -57,7 +60,7 @@ button, input, select, textarea {
 hr {
   width:100%;
   border-color: ${({ theme }) => theme.main};
-  margin:2rem 0 1rem;
+  margin:1rem 0;
 }
 
 a {

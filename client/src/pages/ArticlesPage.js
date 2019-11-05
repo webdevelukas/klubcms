@@ -27,9 +27,9 @@ export default function ArticlesPage() {
       {articles && (
         <MainArea>
           <h1>
-            Welcome back, Herbert
+            Welcome back Herbert
             <span role="img" aria-label="waving hand">
-              👋
+              &nbsp;👋
             </span>
           </h1>
           <SquareButtonWithIcon

@@ -35,7 +35,7 @@ export default function MenuBar({ onClick, open, setOpen }) {
         <GoBackIcon />
         Go back
       </UIElementIconLeft>
-      <StyledUserImage src="https://images.unsplash.com/photo-1521146764736-56c929d59c83?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80" />
+      <StyledUserImage src="https://images.unsplash.com/photo-1571512599285-9ac4fdf3dba9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
       <MenuBurger open={open} setOpen={setOpen} />
     </StyledMenuBar>
   );

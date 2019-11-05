@@ -17,6 +17,12 @@ const Dropdown = styled.select`
   border-radius: 0;
   cursor: pointer;
   font-family: inherit;
+
+  @media (max-width: 480px) {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding: 0 1rem;
+  }
 `;
 
 export const DropdownFullWidth = styled(Dropdown)`

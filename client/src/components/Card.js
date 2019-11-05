@@ -66,7 +66,7 @@ export default function Card({ article }) {
           })}
         </BadgeList>
         <DateOfLatestUpdate>
-          Last Update: {article.date.updated}
+          Last update: {article.date.updated}
         </DateOfLatestUpdate>
         <SquareCardButtonWithIcon
           onClick={() => redirectTo(`${paths.editArticlePage}/${article._id}`)}
