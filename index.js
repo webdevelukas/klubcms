@@ -51,6 +51,18 @@ app.get(`/api/articles/:id`, async (request, response) => {
   }
 });
 
+// Get user by ID from DB
+app.get(`/api/users/:id`, async (request, response) => {
+  try {
+    const userId = request.params.id;
+    const user = await getUser(userId);
+    return response.json(user);
+  } catch (error) {
+    console.error(`Thats the error: ${error}`);
+    return response.end("Error");
+  }
+});
+
 // Update article by ID in articles collection on DB
 app.patch(`/api/articles/:id`, async (request, response) => {
   try {
