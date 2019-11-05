@@ -12,6 +12,7 @@ const {
   setArticle
 } = require("./lib/articles");
 const { getEvents } = require("./lib/events");
+const { getUser } = require("./lib/users");
 const app = express();
 
 // Parse application/json for all request
@@ -28,35 +29,12 @@ app.get(`/api/articles`, async (request, response) => {
   }
 });
 
-// Get events collection from DB
-app.get(`/api/events`, async (request, response) => {
-  try {
-    const events = await getEvents();
-    return response.json(events);
-  } catch (error) {
-    console.error(`Thats the error: ${error}`);
-    return response.end("Error");
-  }
-});
-
 // Get article by ID from DB
 app.get(`/api/articles/:id`, async (request, response) => {
   try {
     const articleId = request.params.id;
     const article = await getArticle(articleId);
     return response.json(article);
-  } catch (error) {
-    console.error(`Thats the error: ${error}`);
-    return response.end("Error");
-  }
-});
-
-// Get user by ID from DB
-app.get(`/api/users/:id`, async (request, response) => {
-  try {
-    const userId = request.params.id;
-    const user = await getUser(userId);
-    return response.json(user);
   } catch (error) {
     console.error(`Thats the error: ${error}`);
     return response.end("Error");
@@ -83,6 +61,29 @@ app.post(`/api/articles`, async (request, response) => {
     console.log(request.body);
     const newArticle = await setArticle(request.body);
     return response.json(newArticle);
+  } catch (error) {
+    console.error(`Thats the error: ${error}`);
+    return response.end("Error");
+  }
+});
+
+// Get events collection from DB
+app.get(`/api/events`, async (request, response) => {
+  try {
+    const events = await getEvents();
+    return response.json(events);
+  } catch (error) {
+    console.error(`Thats the error: ${error}`);
+    return response.end("Error");
+  }
+});
+
+// Get user by ID from DB
+app.get(`/api/users/:id`, async (request, response) => {
+  try {
+    const userId = request.params.id;
+    const user = await getUser(userId);
+    return response.json(user);
   } catch (error) {
     console.error(`Thats the error: ${error}`);
     return response.end("Error");
