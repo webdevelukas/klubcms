@@ -1,13 +1,11 @@
-// Imported dependencies
+// Import dependencies
 import React from "react";
 import PropTypes from "prop-types";
 import useGetEvents from "../hooks/useGetEvents";
 import useGetArticle from "../hooks/useGetArticle";
-
-// Imported functions
 import { handlePatchArticle } from "../lib/handlePatchArticle";
 
-// Imported components
+// Import components
 import MainArea from "../components/Container/MainArea";
 import Menu from "../components/Navigation/Menu";
 import FunctionBar from "../components/FunctionBar/FunctionBar";
@@ -36,10 +34,10 @@ export default function EditArticlePage({ match }) {
 
           <FunctionBar>
             <div>
-              Date added: <b>{article.date.added}</b>
+              Added: <b>{article.date.added}</b>
             </div>
             <div>
-              Date updated: <b>{article.date.updated}</b>
+              Updated: <b>{article.date.updated}</b>
             </div>
           </FunctionBar>
           <Form onSubmit={event => handlePatchArticle(event, articleId)}>

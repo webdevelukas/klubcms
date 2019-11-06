@@ -1,10 +1,11 @@
-// Imported dependencies / functions
+// Import dependencies
 import React, { useContext } from "react";
 import useRedirectTo from "../hooks/useRedirectTo";
 import useGetArticles from "../hooks/useGetArticles";
 import { UserContext } from "../context/UserContext";
+import { paths } from "../lib/paths";
 
-// Imported components / icons
+// Import components / icons
 import Menu from "../components/Navigation/Menu";
 import { SquareButtonWithIcon } from "../components/Buttons/Button";
 import CardList from "../components/Cards/CardList";
@@ -13,9 +14,6 @@ import ProgressGlossary from "../components/FunctionBar/ProgressGlossary";
 import MainArea from "../components/Container/MainArea";
 import Dropdown from "../components/Selects/Dropdown";
 import NewspaperIcon from "../icons/NewspaperIcon";
-
-// Imported data
-import { paths } from "../lib/paths";
 
 export default function ArticlesPage() {
   const redirectTo = useRedirectTo();

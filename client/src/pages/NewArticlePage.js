@@ -1,11 +1,9 @@
-// Imported dependencies
+// Import dependencies
 import React from "react";
 import useGetEvents from "../hooks/useGetEvents";
+import usePostArticle from "../hooks/usePostArticle";
 
-// Imported functions
-import { handlePostArticle } from "../lib/handlePostArticle";
-
-// Imported components
+// Import components
 import MainArea from "../components/Container/MainArea";
 import Menu from "../components/Navigation/Menu";
 import FunctionBar from "../components/FunctionBar/FunctionBar";
@@ -15,11 +13,12 @@ import EventsDropdown from "../components/Selects/EventsDropdown";
 import Input from "../components/Inputs/Input";
 import Form from "../components/Container/Form";
 
-// Imported data
+// Import data
 import { todaysDate } from "../lib/date";
 
 export default function NewArticlePage() {
   const events = useGetEvents();
+  const handlePostArticle = usePostArticle();
 
   return (
     <>

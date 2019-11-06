@@ -1,8 +1,8 @@
-// Imported dependencies
+// Import dependencies
 import React from "react";
 
-// Imported components
-import { ColoredMainArea } from "../components/Container/MainArea";
+// Import components
+import ColoredMainArea from "../components/Container/ColoredMainArea";
 import Input from "../components/Inputs/Input";
 import Button from "../components/Buttons/Button";
 import Label from "../components/Inputs/Label";

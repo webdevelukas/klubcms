@@ -1,9 +1,9 @@
-// Imported dependencies
+// Import dependencies
 import React from "react";
 import styled from "styled-components";
 
-// Imported components
-import { ColoredMainArea } from "../components/Container/MainArea";
+// Import components
+import ColoredMainArea from "../components/Container/ColoredMainArea";
 import Button from "../components/Buttons/Button";
 
 const StyledButton = styled(Button)`
@@ -16,7 +16,7 @@ const StyledButton = styled(Button)`
 
 export default function ErrorPage() {
   return (
-    <ColoredMainArea bgColor={({ theme }) => theme.highlight}>
+    <ColoredMainArea submitSuccesful={false}>
       <h1>No worries, you just forgot to add content</h1>
       <StyledButton>Back to articles page</StyledButton>
     </ColoredMainArea>
