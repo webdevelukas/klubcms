@@ -1,5 +1,5 @@
 // Load environment variables from .env file
-require("env").config();
+require("dotenv").config();
 
 // Import dependencies
 const express = require("express");
