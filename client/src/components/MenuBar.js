@@ -1,5 +1,5 @@
 // Imported dependencies
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
@@ -8,6 +8,7 @@ import { UserImage } from "./Image";
 import MenuBurger from "./MenuBurger";
 import { UIElementIconLeft } from "./UIElement";
 import GoBackIcon from "../icons/GoBackIcon";
+import { UserContext } from "../context/UserContext";
 
 const StyledMenuBar = styled.div`
   z-index: 102;
@@ -29,13 +30,15 @@ const StyledUserImage = styled(UserImage)`
 `;
 
 export default function MenuBar({ onClick, open, setOpen }) {
+  const user = useContext(UserContext);
+
   return (
     <StyledMenuBar onClick={onClick}>
       <UIElementIconLeft>
         <GoBackIcon />
         Go back
       </UIElementIconLeft>
-      <StyledUserImage src="https://images.unsplash.com/photo-1521146764736-56c929d59c83?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80" />
+      <StyledUserImage src={user.image} />
       <MenuBurger open={open} setOpen={setOpen} />
     </StyledMenuBar>
   );

@@ -1,7 +1,8 @@
 // Imported dependencies / functions
-import React from "react";
+import React, { useContext } from "react";
 import useRedirectTo from "../hooks/useRedirectTo";
 import useGetArticles from "../hooks/useGetArticles";
+import { UserContext } from "../context/UserContext";
 
 // Imported components / icons
 import Menu from "../components/Menu";
@@ -19,6 +20,7 @@ import { paths } from "../lib/paths";
 export default function ArticlesPage() {
   const redirectTo = useRedirectTo();
   const articles = useGetArticles();
+  const user = useContext(UserContext);
 
   return (
     <>
@@ -27,9 +29,9 @@ export default function ArticlesPage() {
       {articles && (
         <MainArea>
           <h1>
-            Welcome back, Herbert
+            Welcome back, {user.prename}
             <span role="img" aria-label="waving hand">
-              👋
+              &nbsp;👋
             </span>
           </h1>
           <SquareButtonWithIcon

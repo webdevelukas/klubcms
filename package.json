@@ -1,7 +1,7 @@
 {
-  "name": "masterpiece",
+  "name": "klubcms",
   "version": "1.0.0",
-  "description": "For my first steps as Webdeveloper, I try to build a CMS especially for Sportsclubs.",
+  "description": "For my first steps as Webdeveloper, I try to build a CMS especially for sportsclubs -> 'klubCMS'",
   "main": "server.js",
   "scripts": {
     "client": "cd client && npm start",
@@ -16,7 +16,7 @@
     "type": "git",
     "url": "git+https://github.com/webdevelukas/masterpiece.git"
   },
-  "author": "webdevelukas",
+  "author": "webdevelukas - Lukas Kreidenweis",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/webdevelukas/masterpiece/issues"
