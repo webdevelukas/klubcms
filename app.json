@@ -1,12 +1,6 @@
 {
-  "addons": [
-
-  ],
-  "buildpacks": [
-    {
-      "url": "heroku/nodejs"
-    }
-  ],
+  "name": "klubCMS",
+  "scripts": {},
   "env": {
     "DB_NAME": {
       "required": true
@@ -20,8 +14,11 @@
       "quantity": 1
     }
   },
-  "name": "klubCMS",
-  "scripts": {
-  },
+  "addons": [],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
   "stack": "heroku-18"
 }

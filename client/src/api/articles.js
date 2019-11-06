@@ -1,15 +1,27 @@
-export async function getArticles() {
-  const articles = await fetch(`/api/articles`).then(response =>
-    response.json()
-  );
-  return articles;
+export function getArticles() {
+  return fetch(`/api/articles`, {
+    method: "GET"
+  })
+    .then(response => {
+      if (response.status !== 200) {
+        throw new Error(response.statusText);
+      }
+      return response;
+    })
+    .then(response => response.json());
 }
 
-export async function getArticle(articleId) {
-  const promise = await fetch(`/api/articles/${articleId}`).then(response =>
-    response.json()
-  );
-  return promise;
+export function getArticle(articleId) {
+  return fetch(`/api/articles/${articleId}`, {
+    method: "GET"
+  })
+    .then(response => {
+      if (response.status !== 200) {
+        throw new Error(response.statusText);
+      }
+      return response;
+    })
+    .then(response => response.json());
 }
 
 export function patchArticle(data, articleId) {
