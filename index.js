@@ -25,7 +25,7 @@ app.get(`/api/articles`, async (request, response) => {
     return response.json(articles);
   } catch (error) {
     console.error(`Thats the error: ${error}`);
-    return response.end("Error");
+    return response.status(404).end("Error");
   }
 });
 
@@ -37,7 +37,7 @@ app.get(`/api/articles/:id`, async (request, response) => {
     return response.json(article);
   } catch (error) {
     console.error(`Thats the error: ${error}`);
-    return response.end("Error");
+    return response.status(404).end("Error");
   }
 });
 
@@ -50,7 +50,7 @@ app.patch(`/api/articles/:id`, async (request, response) => {
     return response.json(updatedArticle);
   } catch (error) {
     console.error(`Thats the error: ${error}`);
-    return response.end("Error");
+    return response.status(400).end("Error");
   }
 });
 
@@ -63,7 +63,7 @@ app.post(`/api/articles`, async (request, response) => {
     return response.json(newArticle);
   } catch (error) {
     console.error(`Thats the error: ${error}`);
-    return response.end("Error");
+    return response.status(400).end("Error");
   }
 });
 
@@ -74,7 +74,7 @@ app.get(`/api/events`, async (request, response) => {
     return response.json(events);
   } catch (error) {
     console.error(`Thats the error: ${error}`);
-    return response.end("Error");
+    return response.status(404).end("Error");
   }
 });
 
@@ -86,7 +86,7 @@ app.get(`/api/users/:id`, async (request, response) => {
     return response.json(user);
   } catch (error) {
     console.error(`Thats the error: ${error}`);
-    return response.end("Error");
+    return response.status(404).end("Error");
   }
 });
 
