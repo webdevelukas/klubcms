@@ -4,8 +4,8 @@ import useRedirectTo from "../hooks/useRedirectTo";
 import { UserContext } from "../context/UserContext";
 
 // Imported components
-import Button from "../components/Button";
-import { ColoredMainArea } from "../components/MainArea";
+import Button from "../components/Buttons/Button";
+import { ColoredMainArea } from "../components/Container/MainArea";
 
 // Imported data
 import { paths } from "../lib/paths";

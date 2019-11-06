@@ -6,14 +6,14 @@ import useGetEvents from "../hooks/useGetEvents";
 import { handlePostArticle } from "../lib/handlePostArticle";
 
 // Imported components
-import MainArea from "../components/MainArea";
-import Menu from "../components/Menu";
-import FunctionBar from "../components/FunctionBar";
-import Button from "../components/Button";
-import Textarea, { TextareaWithBoldText } from "../components/Textarea";
-import EventsDropdown from "../components/EventsDropdown";
-import Input from "../components/Input";
-import Form from "../components/Form";
+import MainArea from "../components/Container/MainArea";
+import Menu from "../components/Navigation/Menu";
+import FunctionBar from "../components/FunctionBar/FunctionBar";
+import Button from "../components/Buttons/Button";
+import Textarea, { TextareaWithBoldText } from "../components/Inputs/Textarea";
+import EventsDropdown from "../components/Selects/EventsDropdown";
+import Input from "../components/Inputs/Input";
+import Form from "../components/Container/Form";
 
 // Imported data
 import { todaysDate } from "../lib/date";

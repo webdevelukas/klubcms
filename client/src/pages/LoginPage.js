@@ -2,11 +2,11 @@
 import React from "react";
 
 // Imported components
-import { ColoredMainArea } from "../components/MainArea";
-import Input from "../components/Input";
-import Button from "../components/Button";
-import Label from "../components/Label";
-import Form from "../components/Form";
+import { ColoredMainArea } from "../components/Container/MainArea";
+import Input from "../components/Inputs/Input";
+import Button from "../components/Buttons/Button";
+import Label from "../components/Inputs/Label";
+import Form from "../components/Container/Form";
 
 export default function LoginPage() {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import CardList from "../components/CardList";
+import CardList from "../components/Cards/CardList";
 
 export default {
   title: "Card"

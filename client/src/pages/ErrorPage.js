@@ -3,8 +3,8 @@ import React from "react";
 import styled from "styled-components";
 
 // Imported components
-import { ColoredMainArea } from "../components/MainArea";
-import Button from "../components/Button";
+import { ColoredMainArea } from "../components/Container/MainArea";
+import Button from "../components/Buttons/Button";
 
 const StyledButton = styled(Button)`
   background: ${({ active, theme }) =>

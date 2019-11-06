@@ -8,15 +8,15 @@ import useGetArticle from "../hooks/useGetArticle";
 import { handlePatchArticle } from "../lib/handlePatchArticle";
 
 // Imported components
-import MainArea from "../components/MainArea";
-import Menu from "../components/Menu";
-import FunctionBar from "../components/FunctionBar";
-import Button from "../components/Button";
-import Textarea, { TextareaWithBoldText } from "../components/Textarea";
-import Gallery from "../components/Gallery";
-import Form from "../components/Form";
-import Input from "../components/Input";
-import EventsDropdown from "../components/EventsDropdown";
+import MainArea from "../components/Container/MainArea";
+import Menu from "../components/Navigation/Menu";
+import FunctionBar from "../components/FunctionBar/FunctionBar";
+import Button from "../components/Buttons/Button";
+import Textarea, { TextareaWithBoldText } from "../components/Inputs/Textarea";
+import Gallery from "../components/Images/Gallery";
+import Form from "../components/Container/Form";
+import Input from "../components/Inputs/Input";
+import EventsDropdown from "../components/Selects/EventsDropdown";
 
 export default function EditArticlePage({ match }) {
   const articleId = match.params.articleId;

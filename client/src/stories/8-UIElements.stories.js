@@ -1,37 +1,37 @@
 import React from "react";
 import {
-  UIElementIconLeft,
-  UIElementIconTop,
-  UIElementIconRight
-} from "../components/UIElement";
+  IconTextContainerIconLeft,
+  IconTextContainerIconTop,
+  IconTextContainerIconRight
+} from "../components/Container/IconTextContainer";
 import MenuCrossIcon from "../icons/MenuCrossIcon";
 import GoBackIcon from "../icons/GoBackIcon";
 import LogoutPowerIcon from "../icons/LogoutPowerIcon";
-import MenuBurger from "../components/MenuBurger";
+import MenuBurger from "../components/Navigation/MenuBurger";
 
 export default {
   title: "UI-Elements"
 };
 
 export const GoBack = () => (
-  <UIElementIconLeft>
+  <IconTextContainerIconLeft>
     <GoBackIcon />
     Go back
-  </UIElementIconLeft>
+  </IconTextContainerIconLeft>
 );
 
 export const Burger = () => <MenuBurger />;
 
 export const MenuCross = () => (
-  <UIElementIconTop>
+  <IconTextContainerIconTop>
     <MenuCrossIcon />
     close
-  </UIElementIconTop>
+  </IconTextContainerIconTop>
 );
 
 export const Logout = () => (
-  <UIElementIconRight>
+  <IconTextContainerIconRight>
     Logout
     <LogoutPowerIcon />
-  </UIElementIconRight>
+  </IconTextContainerIconRight>
 );

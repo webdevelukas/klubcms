@@ -20,7 +20,6 @@ body {
   width: 100vw;
   margin: 0;
   background: ${({ theme }) => theme.light};
-  overflow-x: hidden;
 }
 
 h1, h2, h3 {

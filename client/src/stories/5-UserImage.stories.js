@@ -1,5 +1,5 @@
 import React from "react";
-import { UserImage } from "../components/Image";
+import { UserImage } from "../components/Images/Image";
 
 export default {
   title: "UserImage"

@@ -3,15 +3,15 @@ import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
-import useRedirectTo from "../hooks/useRedirectTo";
+import useRedirectTo from "../../hooks/useRedirectTo";
 
 // Imported components / icons
 import MenuListItem from "./MenuListItem";
-import { UIElementIconRight } from "./UIElement";
-import LogoutPowerIcon from "../icons/LogoutPowerIcon";
+import { IconTextContainerIconRight } from "../Container/IconTextContainer";
+import LogoutPowerIcon from "../../icons/LogoutPowerIcon";
 
 // Imported data
-import { paths } from "../lib/paths";
+import { paths } from "../../lib/paths";
 
 const StyledNav = styled.nav`
   z-index: 100;
@@ -56,10 +56,10 @@ export default function MenuList({ open }) {
           <MenuListItem>New Article</MenuListItem>
         </NavLink>
       </StyledMenuList>
-      <UIElementIconRight onClick={() => redirectTo(paths.loginPage)}>
+      <IconTextContainerIconRight onClick={() => redirectTo(paths.loginPage)}>
         Logout
         <LogoutPowerIcon />
-      </UIElementIconRight>
+      </IconTextContainerIconRight>
     </StyledNav>
   );
 }
