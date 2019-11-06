@@ -1,7 +1,13 @@
 // Get user by ID
-export async function getUser(userId) {
-  const promise = await fetch(`/api/users/${userId}`).then(response =>
-    response.json()
-  );
-  return promise;
+export function getUser(userId) {
+  return fetch(`/api/users/${userId}`, {
+    method: "GET"
+  })
+    .then(response => {
+      if (response.status !== 200) {
+        throw new Error(response.statusText);
+      }
+      return response;
+    })
+    .then(response => response.json());
 }
