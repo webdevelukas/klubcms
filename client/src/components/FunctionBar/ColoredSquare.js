@@ -1,20 +1,18 @@
-// Imported dependencies
-import React from "react";
-import styled from "styled-components";
+// Import dependencies
 import PropTypes from "prop-types";
+import styled from "styled-components";
 
-const StyledColoredSquare = styled.span`
+const ColoredSquare = styled.span`
   display: inline-block;
   width: 20px;
   height: 20px;
-  background: ${({ backgroundColor }) => backgroundColor};
+  background: ${({ theme, done }) =>
+    done ? theme.progressDone : theme.progressOpen};
   margin: 0 0.5em;
 `;
 
-export default function ColoredSquare({ backgroundColor }) {
-  return <StyledColoredSquare backgroundColor={backgroundColor} />;
-}
+export default ColoredSquare;
 
 ColoredSquare.propTypes = {
-  backgroundColor: PropTypes.func
+  done: PropTypes.bool
 };

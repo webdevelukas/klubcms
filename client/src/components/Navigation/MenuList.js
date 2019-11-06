@@ -1,17 +1,15 @@
-// Imported dependencies
+// Import dependencies
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 import { NavLink } from "react-router-dom";
 import useRedirectTo from "../../hooks/useRedirectTo";
+import { paths } from "../../lib/paths";
 
-// Imported components / icons
+// Import components / icons
 import MenuListItem from "./MenuListItem";
 import { IconTextContainerIconRight } from "../Container/IconTextContainer";
 import LogoutPowerIcon from "../../icons/LogoutPowerIcon";
-
-// Imported data
-import { paths } from "../../lib/paths";
 
 const StyledNav = styled.nav`
   z-index: 100;

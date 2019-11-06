@@ -1,4 +1,5 @@
-// Imported dependencies
+// Import dependencies
+import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const Dropdown = styled.select`
@@ -27,6 +28,11 @@ const Dropdown = styled.select`
 
 export const DropdownFullWidth = styled(Dropdown)`
   width: 100%;
+  margin-bottom: 1rem;
 `;
 
 export default Dropdown;
+
+Dropdown.propTypes = {
+  active: PropTypes.bool
+};

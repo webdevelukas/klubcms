@@ -1,4 +1,4 @@
-// Imported dependencies
+// Import dependencies
 import styled from "styled-components";
 
 const Form = styled.form`

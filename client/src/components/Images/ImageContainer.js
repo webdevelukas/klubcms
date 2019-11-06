@@ -1,29 +1,21 @@
-// Imported dependencies
-import React from "react";
+// Import dependencies
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const StyledImageContainer = styled.picture`
+const ImageContainer = styled.picture`
   position: relative;
   width: 100%;
   height: auto;
 `;
 
-export const SquareImageContainer = styled(StyledImageContainer)`
+export const SquareImageContainer = styled(ImageContainer)`
   padding-bottom: 100%;
   display: ${({ galleryImagesLength }) =>
     galleryImagesLength <= 4 ? "none" : "block"};
 `;
 
-export default function ImageContainer({ children, galleryImagesLength }) {
-  return (
-    <StyledImageContainer galleryImagesLength={galleryImagesLength}>
-      {children}
-    </StyledImageContainer>
-  );
-}
+export default ImageContainer;
 
 ImageContainer.propTypes = {
-  children: PropTypes.node,
   galleryImagesLength: PropTypes.number
 };

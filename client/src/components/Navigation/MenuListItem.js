@@ -1,9 +1,8 @@
-// Imported dependencies
-import React from "react";
+// Import dependencies
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const StyledMenuListItem = styled.li`
+const MenuListItem = styled.li`
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -20,16 +19,8 @@ const StyledMenuListItem = styled.li`
   cursor: pointer;
 `;
 
-export default function MenuListItem({ active, onClick, children }) {
-  return (
-    <StyledMenuListItem active={active} onClick={onClick}>
-      {children}
-    </StyledMenuListItem>
-  );
-}
+export default MenuListItem;
 
 MenuListItem.propTypes = {
-  active: PropTypes.bool,
-  onClick: PropTypes.func,
-  children: PropTypes.node
+  active: PropTypes.bool
 };

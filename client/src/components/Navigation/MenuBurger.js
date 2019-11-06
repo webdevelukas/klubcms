@@ -1,9 +1,9 @@
-// Imported dependencies
+// Import dependencies
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-// Imported components
+// Import components
 import { IconTextContainerIconTop } from "../Container/IconTextContainer";
 
 const StyledMenuBurger = styled.button`

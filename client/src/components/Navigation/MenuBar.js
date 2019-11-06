@@ -1,9 +1,9 @@
-// Imported dependencies
+// Import dependencies
 import React, { useContext } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-// Imported components / icons
+// Import components / icons
 import { UserImage } from "../Images/Image";
 import MenuBurger from "./MenuBurger";
 import { IconTextContainerIconLeft } from "../Container/IconTextContainer";

@@ -50,7 +50,7 @@ h3 {
 button, input, select, textarea {
   font-size: 1rem;
   border: none;
-
+  
   &:focus {
     outline: none;
   }

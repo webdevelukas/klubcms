@@ -1,4 +1,4 @@
-// Imported dependencies
+// Import dependencies
 import styled from "styled-components";
 
 // Basic styling for all textareas
@@ -12,6 +12,7 @@ const Textarea = styled.textarea`
   max-width: 100%;
   min-height: 180px;
   font-family: inherit;
+  margin-bottom: 1rem;
 
   ::-webkit-input-placeholder {
     color: hsla(147, 63%, 7%, 0.4);
