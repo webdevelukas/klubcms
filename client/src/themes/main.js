@@ -4,7 +4,8 @@ const mainTheme = {
   highlightOverlay: "hsla(3, 100%, 64%,0.9)",
   highlightContrast: "hsl(0, 0%, 100%)",
   progressDone: "#1AFF8C",
-  progressOpen: "#FFE666"
+  progressOpen: "#FFE666",
+  light: "#e1e1e1"
 };
 
 export default mainTheme;

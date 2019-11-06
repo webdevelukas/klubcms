@@ -31,7 +31,7 @@ export default function ArticlesPage() {
           <h1>
             Welcome back, {user.prename}
             <span role="img" aria-label="waving hand">
-              👋
+              &nbsp;👋
             </span>
           </h1>
           <SquareButtonWithIcon

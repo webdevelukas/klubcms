@@ -5,7 +5,7 @@ const MainArea = styled.main`
   display: grid;
   grid-auto-rows: auto;
   justify-items: center;
-  padding: 1rem 1rem;
+  padding: 2rem 1rem;
   overflow-y: scroll;
 `;
 
