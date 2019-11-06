@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import styled, { ThemeProvider } from "styled-components";
 import mainTheme from "./themes/main";
 import GlobalStyles from "./GlobalStyles";
+import { UserProvider } from "./context/UserContext";
 
 // Imported pages
 import ErrorPage from "./pages/ErrorPage";
@@ -27,21 +28,27 @@ const StyledApp = styled.div`
 function App() {
   return (
     <ThemeProvider theme={mainTheme}>
-      <GlobalStyles />
-      <StyledApp>
-        <Router>
-          <Route exact path={paths.home} component={ArticlesPage} />
-          <Route exact path={paths.articlesPage} component={ArticlesPage} />
-          <Route exact path={paths.newArticlePage} component={NewArticlePage} />
-          <Route exact path={paths.loginPage} component={LoginPage} />
-          <Route exact path={paths.submitPage} component={SubmitPage} />
-          <Route exact path={paths.errorPage} component={ErrorPage} />
-          <Route
-            path={`${paths.editArticlePage}/:articleId`}
-            component={EditArticlePage}
-          />
-        </Router>
-      </StyledApp>
+      <UserProvider>
+        <GlobalStyles />
+        <StyledApp>
+          <Router>
+            <Route exact path={paths.home} component={ArticlesPage} />
+            <Route exact path={paths.articlesPage} component={ArticlesPage} />
+            <Route
+              exact
+              path={paths.newArticlePage}
+              component={NewArticlePage}
+            />
+            <Route exact path={paths.loginPage} component={LoginPage} />
+            <Route exact path={paths.submitPage} component={SubmitPage} />
+            <Route exact path={paths.errorPage} component={ErrorPage} />
+            <Route
+              path={`${paths.editArticlePage}/:articleId`}
+              component={EditArticlePage}
+            />
+          </Router>
+        </StyledApp>
+      </UserProvider>
     </ThemeProvider>
   );
 }
