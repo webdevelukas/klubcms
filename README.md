@@ -1,6 +1,6 @@
 # Masterpiece
 
-For my first steps as Webdeveloper, I try to build a CMS especially for sportsclubs.
+For my first steps as Webdeveloper, I try to build a CMS especially for sportsclubs -> "klubCMS".
 
 ## Usage
 
