@@ -11,3 +11,25 @@ export function getUser(userId) {
     })
     .then(response => response.json());
 }
+
+// Add user
+export function postUser(data) {
+  fetch(`/api/users`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  });
+}
+
+// Compare user credentials
+export function postUserLogin(data) {
+  fetch(`/api/users/login`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  });
+}
