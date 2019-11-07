@@ -34,7 +34,7 @@ function App() {
         <GlobalStyles />
         <StyledApp>
           <Router>
-            <Route exact path={paths.home} component={ArticlesPage} />
+            <Route exact path={paths.home} component={LoginPage} />
             <Route exact path={paths.articlesPage} component={ArticlesPage} />
             <Route
               exact

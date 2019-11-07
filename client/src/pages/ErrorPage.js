@@ -1,6 +1,7 @@
 // Import dependencies
 import React from "react";
 import styled from "styled-components";
+import { useHistory } from "react-router-dom";
 
 // Import components
 import ColoredMainArea from "../components/Container/ColoredMainArea";
@@ -15,10 +16,14 @@ const StyledButton = styled(Button)`
 `;
 
 export default function ErrorPage() {
+  const history = useHistory();
+
   return (
-    <ColoredMainArea submitSuccesful={false}>
+    <ColoredMainArea colorScheme="error">
       <h1>No worries, you just forgot to add content</h1>
-      <StyledButton>Back to articles page</StyledButton>
+      <StyledButton onClick={() => history.goBack()}>
+        Back to the article
+      </StyledButton>
     </ColoredMainArea>
   );
 }
