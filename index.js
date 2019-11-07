@@ -12,8 +12,9 @@ const {
   setArticle
 } = require("./lib/articles");
 const { getEvents } = require("./lib/events");
-const { getUser } = require("./lib/users");
+const { getUserById, getUserByName, setUser } = require("./lib/users");
 const app = express();
+const bcrypt = require("bcrypt");
 
 // Parse application/json for all request
 app.use(express.json());
@@ -80,11 +81,43 @@ app.get(`/api/events`, async (request, response) => {
 app.get(`/api/users/:id`, async (request, response) => {
   try {
     const userId = request.params.id;
-    const user = await getUser(userId);
+    const user = await getUserById(userId);
     return response.json(user);
   } catch (error) {
     console.error(`Thats the error: ${error}`);
     return response.status(404).end("Error");
+  }
+});
+
+// Add new user in users collection on DB
+app.post(`/api/users`, async (request, response) => {
+  try {
+    const hashedPassword = await bcrypt.hash(request.body.password, 10);
+    const password = { password: hashedPassword };
+    const newUser = Object.assign(request.body, password);
+
+    const user = await setUser(newUser);
+    return response.json(user);
+  } catch (error) {
+    console.error(`Thats the error: ${error}`);
+    return response.status(400).end("Error");
+  }
+});
+
+// Compare users login credentials with user in DB
+app.post(`/api/users/login`, async (request, response) => {
+  const user = await getUserByName(request.body.username);
+  if (user === null) {
+    return response.status(400).send("cannot find user");
+  }
+  try {
+    if (await bcrypt.compare(request.body.password, user.password)) {
+      response.send("success");
+    } else {
+      response.send("Not Allowed");
+    }
+  } catch {
+    response.status(500).send();
   }
 });
 

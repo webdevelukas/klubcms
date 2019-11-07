@@ -1,5 +1,6 @@
 // Import dependencies
 import React from "react";
+import usePostUserLogin from "../hooks/usePostUserLogin";
 
 // Import components
 import ColoredMainArea from "../components/Container/ColoredMainArea";
@@ -7,26 +8,26 @@ import Input from "../components/Inputs/Input";
 import Button from "../components/Buttons/Button";
 import Label from "../components/Inputs/Label";
 import Form from "../components/Container/Form";
-import useRedirectTo from "../hooks/useRedirectTo";
-import { paths } from "../lib/paths";
 
 export default function LoginPage() {
-  const redirectTo = useRedirectTo();
+  const handlePostUserLogin = usePostUserLogin();
 
   return (
     <ColoredMainArea colorScheme="main">
       <h1>Hello again, what‘s your..</h1>
-      <Form onSubmit={() => redirectTo(paths.articlesPage)}>
+      <Form onSubmit={event => handlePostUserLogin(event)}>
         <Label htmlFor="username">Username?</Label>
         <Input
           type="text"
           id="username"
+          name="username"
           placeholder="My bad.. what was your username again?"
         />
         <Label htmlFor="password">Password?</Label>
         <Input
           type="password"
           id="password"
+          name="password"
           placeholder="Tell me your secret"
         />
         <Button>Login</Button>
