@@ -1,4 +1,4 @@
-// Imported dependencies / functions
+// Import dependencies / functions
 import React from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import styled, { ThemeProvider } from "styled-components";
@@ -6,15 +6,16 @@ import mainTheme from "./themes/main";
 import GlobalStyles from "./GlobalStyles";
 import { UserProvider } from "./context/UserContext";
 
-// Imported pages
+// Import pages
 import ErrorPage from "./pages/ErrorPage";
 import LoginPage from "./pages/LoginPage";
 import ArticlesPage from "./pages/ArticlesPage";
 import NewArticlePage from "./pages/NewArticlePage";
 import EditArticlePage from "./pages/EditArticlePage";
 import SubmitPage from "./pages/SubmitPage";
+import RegistrationPage from "./pages/RegistrationPage";
 
-// Imported data
+// Import data
 import { paths } from "./lib/paths";
 
 const StyledApp = styled.div`
@@ -42,6 +43,11 @@ function App() {
               component={NewArticlePage}
             />
             <Route exact path={paths.loginPage} component={LoginPage} />
+            <Route
+              exact
+              path={paths.registrationPage}
+              component={RegistrationPage}
+            />
             <Route exact path={paths.submitPage} component={SubmitPage} />
             <Route exact path={paths.errorPage} component={ErrorPage} />
             <Route

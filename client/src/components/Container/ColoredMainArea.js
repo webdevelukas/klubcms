@@ -17,5 +17,5 @@ const ColoredMainArea = styled.main`
 export default ColoredMainArea;
 
 ColoredMainArea.propTypes = {
-  submitSuccessful: PropTypes.bool
+  colorScheme: PropTypes.string
 };
