@@ -2,6 +2,7 @@
 import React, { useContext } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import { useHistory } from "react-router-dom";
 
 // Import components / icons
 import { UserImage } from "../Images/Image";
@@ -29,12 +30,13 @@ const StyledUserImage = styled(UserImage)`
   bottom: -25px;
 `;
 
-export default function MenuBar({ onClick, open, setOpen }) {
+export default function MenuBar({ open, setOpen }) {
   const user = useContext(UserContext);
+  const history = useHistory();
 
   return (
-    <StyledMenuBar onClick={onClick}>
-      <IconTextContainerIconLeft>
+    <StyledMenuBar>
+      <IconTextContainerIconLeft onClick={() => history.goBack()}>
         <GoBackIcon />
         Go back
       </IconTextContainerIconLeft>
@@ -45,7 +47,6 @@ export default function MenuBar({ onClick, open, setOpen }) {
 }
 
 MenuBar.propTypes = {
-  onClick: PropTypes.func,
   open: PropTypes.bool.isRequired,
   setOpen: PropTypes.func.isRequired
 };
