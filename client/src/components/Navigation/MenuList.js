@@ -19,9 +19,8 @@ const StyledNav = styled.nav`
   right: 0;
   height: 100vh;
   background: ${({ theme }) => theme.main};
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 
   /* Open/Close Animation */
   transition: transform 0.3s ease-in-out;
@@ -36,6 +35,12 @@ const StyledNav = styled.nav`
 const StyledMenuList = styled.ul`
   padding: 0;
   margin: 0;
+  grid-column: span 2;
+`;
+
+const LogoutButton = styled(IconTextContainerIconRight)`
+  grid-column: 2;
+  align-self: end;
 `;
 
 export default function MenuList({ open }) {
@@ -54,10 +59,10 @@ export default function MenuList({ open }) {
           <MenuListItem>New Article</MenuListItem>
         </NavLink>
       </StyledMenuList>
-      <IconTextContainerIconRight onClick={() => redirectTo(paths.loginPage)}>
+      <LogoutButton onClick={() => redirectTo(paths.loginPage)}>
         Logout
         <LogoutPowerIcon />
-      </IconTextContainerIconRight>
+      </LogoutButton>
     </StyledNav>
   );
 }
