@@ -15,7 +15,7 @@ export default function SubmitPage() {
   const user = useContext(UserContext);
 
   return (
-    <ColoredMainArea submitSuccessful>
+    <ColoredMainArea colorScheme="main">
       <h1>
         Nice Article! <br /> Thanks for your commitment {user.prename}
       </h1>
