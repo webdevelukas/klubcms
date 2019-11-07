@@ -1,13 +1,13 @@
-// Imported dependencies
+// Import dependencies
 import React, { useContext } from "react";
 import useRedirectTo from "../hooks/useRedirectTo";
 import { UserContext } from "../context/UserContext";
 
-// Imported components
-import Button from "../components/Button";
-import { ColoredMainArea } from "../components/MainArea";
+// Import components
+import Button from "../components/Buttons/Button";
+import ColoredMainArea from "../components/Container/ColoredMainArea";
 
-// Imported data
+// Import data
 import { paths } from "../lib/paths";
 
 export default function SubmitPage() {
@@ -15,7 +15,7 @@ export default function SubmitPage() {
   const user = useContext(UserContext);
 
   return (
-    <ColoredMainArea bgColor={({ theme }) => theme.main}>
+    <ColoredMainArea submitSuccessful>
       <h1>
         Nice Article! <br /> Thanks for your commitment {user.prename}
       </h1>

@@ -1,7 +1,7 @@
 // Imported dependencies
 import styled from "styled-components";
 
-const UIElement = styled.div`
+const IconTextContainer = styled.div`
   display: inline-grid;
   justify-items: center;
   align-items: center;
@@ -15,7 +15,7 @@ const UIElement = styled.div`
   }
 `;
 
-export const UIElementIconTop = styled(UIElement)`
+export const IconTextContainerIconTop = styled(IconTextContainer)`
   grid-template-rows: 2em 1em;
   svg {
     width: 3em;
@@ -23,13 +23,13 @@ export const UIElementIconTop = styled(UIElement)`
   }
 `;
 
-export const UIElementIconLeft = styled(UIElement)`
+export const IconTextContainerIconLeft = styled(IconTextContainer)`
   grid-template-columns: 0.5fr 1fr;
 `;
 
-export const UIElementIconRight = styled(UIElement)`
+export const IconTextContainerIconRight = styled(IconTextContainer)`
   grid-template-columns: 1fr 1fr;
   align-self: right;
 `;
 
-export default UIElement;
+export default IconTextContainer;

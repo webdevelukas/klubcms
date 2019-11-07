@@ -1,10 +1,9 @@
-// Imported dependencies
-import React from "react";
-import styled from "styled-components";
+// Import dependencies
 import PropTypes from "prop-types";
+import styled from "styled-components";
 
 // Basic styling for all buttons (default / active)
-const StyledButton = styled.button`
+const Button = styled.button`
   display: flex;
   align-items: center;
   background: ${({ active, theme }) =>
@@ -69,13 +68,9 @@ export const SquareCardButtonWithIcon = styled(SquareButtonWithIcon)`
   }
 `;
 
-export default function Button({ ...props }) {
-  return <StyledButton {...props}></StyledButton>;
-}
+export default Button;
 
 Button.propTypes = {
-  children: PropTypes.node,
-  onClick: PropTypes.func,
   active: PropTypes.bool,
   className: PropTypes.any
 };

@@ -1,8 +1,8 @@
-// Imported dependencies
+// Import dependencies
 import React from "react";
 import PropTypes from "prop-types";
 
-// Imported components
+// Import components
 import { DropdownFullWidth } from "./Dropdown";
 
 export default function EventsDropdown({ events, ...props }) {

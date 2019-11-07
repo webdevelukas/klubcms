@@ -1,10 +1,10 @@
-// Imported dependencies
+// Import dependencies
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-// Imported components
-import { UIElementIconTop } from "./UIElement";
+// Import components
+import { IconTextContainerIconTop } from "../Container/IconTextContainer";
 
 const StyledMenuBurger = styled.button`
   display: flex;
@@ -42,14 +42,14 @@ const StyledMenuBurger = styled.button`
 
 export default function MenuBurger({ open, setOpen }) {
   return (
-    <UIElementIconTop open={open} onClick={() => setOpen(!open)}>
+    <IconTextContainerIconTop open={open} onClick={() => setOpen(!open)}>
       <StyledMenuBurger open={open}>
         <div />
         <div />
         <div />
       </StyledMenuBurger>
       {open ? "close" : "menu"}
-    </UIElementIconTop>
+    </IconTextContainerIconTop>
   );
 }
 

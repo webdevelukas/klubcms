@@ -1,6 +1,6 @@
 import React from "react";
-import Badge from "../components/Badge";
-import BadgeList from "../components/BadgeList";
+import Badge from "../components/Badges/Badge";
+import BadgeList from "../components/Badges/BadgeList";
 
 export default {
   title: "Badge"

@@ -2,7 +2,7 @@ import React from "react";
 import Button, {
   ButtonWithIcon,
   SquareButtonWithIcon
-} from "../components/Button";
+} from "../components/Buttons/Button";
 import ArrowDropDownIcon from "../icons/ArrowDropDownIcon";
 import NewspaperIcon from "../icons/NewspaperIcon";
 import TextIcon from "../icons/TextIcon";

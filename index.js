@@ -57,8 +57,6 @@ app.patch(`/api/articles/:id`, async (request, response) => {
 // Add new article in articles collection on DB
 app.post(`/api/articles`, async (request, response) => {
   try {
-    console.log(request);
-    console.log(request.body);
     const newArticle = await setArticle(request.body);
     return response.json(newArticle);
   } catch (error) {

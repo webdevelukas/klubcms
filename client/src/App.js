@@ -23,6 +23,8 @@ const StyledApp = styled.div`
   grid-template-rows: auto 1fr;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  position: relative;
 `;
 
 function App() {

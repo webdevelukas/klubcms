@@ -1,9 +1,9 @@
-// Imported dependencies / functions
+// Import dependencies
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-// Imported components / icons
+// Import components / icons
 import { SquareImageContainer } from "./ImageContainer";
 import { GalleryImage } from "./Image";
 import ImageOverlay from "./ImageOverlay";
@@ -52,6 +52,5 @@ export default function Gallery({ articleGallery }) {
 }
 
 Gallery.propTypes = {
-  children: PropTypes.node,
   articleGallery: PropTypes.array
 };

@@ -2,22 +2,20 @@
 import React from "react";
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import useRedirectTo from "../hooks/useRedirectTo";
+import useRedirectTo from "../../hooks/useRedirectTo";
+import { paths } from "../../lib/paths";
 
 // Imported components / icons
-import { CardImage } from "./Image";
+import { CardImage } from "../Images/Image";
 import CardTitleOverline from "./CardTitleOverline";
 import CardTitle from "./CardTitle";
 import ProgressBarList from "./ProgressBarList";
 import ProgressBarListItem from "./ProgressBarListItem";
-import BadgeList from "./BadgeList";
-import Badge from "./Badge";
+import BadgeList from "../Badges/BadgeList";
+import Badge from "../Badges/Badge";
 import DateOfLatestUpdate from "./DateOfLatestUpdate";
-import { SquareCardButtonWithIcon } from "./Button";
-import WrenchIcon from "../icons/WrenchIcon";
-
-// Imported data
-import { paths } from "../lib/paths";
+import { SquareCardButtonWithIcon } from "../Buttons/Button";
+import WrenchIcon from "../../icons/WrenchIcon";
 
 const StyledCard = styled.article`
   display: grid;

@@ -1,9 +1,8 @@
-// Imported dependencies
-import React from "react";
-import styled from "styled-components";
+// Import dependencies
 import PropTypes from "prop-types";
+import styled from "styled-components";
 
-const StyledProgressBarListItem = styled.div`
+const ProgressBarListItem = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,15 +20,8 @@ const StyledProgressBarListItem = styled.div`
   }
 `;
 
-export default function ProgressBarListItem({ finished, children }) {
-  return (
-    <StyledProgressBarListItem finished={finished}>
-      {children}
-    </StyledProgressBarListItem>
-  );
-}
+export default ProgressBarListItem;
 
 ProgressBarListItem.propTypes = {
-  finished: PropTypes.bool,
-  children: PropTypes.node
+  finished: PropTypes.bool
 };

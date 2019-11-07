@@ -1,25 +1,24 @@
-// Imported dependencies
+// Import dependencies
 import React from "react";
 import useGetEvents from "../hooks/useGetEvents";
+import usePostArticle from "../hooks/usePostArticle";
 
-// Imported functions
-import { handlePostArticle } from "../lib/handlePostArticle";
+// Import components
+import MainArea from "../components/Container/MainArea";
+import Menu from "../components/Navigation/Menu";
+import FunctionBar from "../components/FunctionBar/FunctionBar";
+import Button from "../components/Buttons/Button";
+import Textarea, { TextareaWithBoldText } from "../components/Inputs/Textarea";
+import EventsDropdown from "../components/Selects/EventsDropdown";
+import Input from "../components/Inputs/Input";
+import Form from "../components/Container/Form";
 
-// Imported components
-import MainArea from "../components/MainArea";
-import Menu from "../components/Menu";
-import FunctionBar from "../components/FunctionBar";
-import Button from "../components/Button";
-import Textarea, { TextareaWithBoldText } from "../components/Textarea";
-import EventsDropdown from "../components/EventsDropdown";
-import Input from "../components/Input";
-import Form from "../components/Form";
-
-// Imported data
+// Import data
 import { todaysDate } from "../lib/date";
 
 export default function NewArticlePage() {
   const events = useGetEvents();
+  const handlePostArticle = usePostArticle();
 
   return (
     <>

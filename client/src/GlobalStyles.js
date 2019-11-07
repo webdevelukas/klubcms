@@ -20,7 +20,6 @@ body {
   width: 100vw;
   margin: 0;
   background: ${({ theme }) => theme.light};
-  overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -51,7 +50,7 @@ h3 {
 button, input, select, textarea {
   font-size: 1rem;
   border: none;
-
+  
   &:focus {
     outline: none;
   }

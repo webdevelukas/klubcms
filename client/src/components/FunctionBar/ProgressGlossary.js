@@ -1,8 +1,8 @@
-// Imported dependencies
+// Import dependencies
 import React from "react";
 import styled from "styled-components";
 
-// Imported components
+// Import components
 import ColoredSquare from "./ColoredSquare";
 
 const StyledProgressGlossary = styled.div`
@@ -14,9 +14,9 @@ export default function ProgressGlossary() {
   return (
     <StyledProgressGlossary>
       In Progress
-      <ColoredSquare backgroundColor={({ theme }) => theme.progressOpen} />
+      <ColoredSquare done={false} />
       Done
-      <ColoredSquare backgroundColor={({ theme }) => theme.progressDone} />
+      <ColoredSquare done />
     </StyledProgressGlossary>
   );
 }
