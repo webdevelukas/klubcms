@@ -108,13 +108,13 @@ app.post(`/api/users`, async (request, response) => {
 app.post(`/api/users/login`, async (request, response) => {
   const user = await getUserByName(request.body.username);
   if (user === null) {
-    return response.status(400).send("cannot find user");
+    return response.status(400).send("Cannot find user");
   }
   try {
     if (await bcrypt.compare(request.body.password, user.password)) {
-      response.send("success");
+      response.json("Success");
     } else {
-      response.send("Not Allowed");
+      response.json("Not Allowed");
     }
   } catch {
     response.status(500).send();

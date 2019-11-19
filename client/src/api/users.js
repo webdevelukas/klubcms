@@ -25,7 +25,7 @@ export function postUser(data) {
 
 // Compare user credentials
 export function postUserLogin(data) {
-  fetch(`/api/users/login`, {
+  return fetch(`/api/users/login`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
