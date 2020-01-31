@@ -1,4 +1,4 @@
-# Masterpiece
+# klubCMS
 
 For my first steps as Webdeveloper, I try to build a CMS especially for sportsclubs -> "klubCMS".
 
@@ -18,7 +18,7 @@ For my first steps as Webdeveloper, I try to build a CMS especially for sportscl
    cd ..
    ```
 
-1. Add environment variables in `.env` file.
+1. Add `.env` file and fill in your environment variables.
 
 1. To start the server and client at the same time:
 
@@ -29,5 +29,5 @@ For my first steps as Webdeveloper, I try to build a CMS especially for sportscl
 1. Running the production build on localhost. This will create a production build, then Node will serve the app on http://localhost:8080
 
    ```
-   NODE_ENV=production npm run dev:server
+   npm run dev:server
    ```

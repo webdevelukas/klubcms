@@ -1,6 +1,7 @@
 // Import dependencies
 import React from "react";
 import usePostUserLogin from "../hooks/usePostUserLogin";
+import useRedirectTo from "../hooks/useRedirectTo";
 
 // Import components
 import ColoredMainArea from "../components/Container/ColoredMainArea";
@@ -8,9 +9,13 @@ import Input from "../components/Inputs/Input";
 import Button from "../components/Buttons/Button";
 import Label from "../components/Inputs/Label";
 import Form from "../components/Container/Form";
+import { paths } from "../lib/paths";
 
 export default function LoginPage() {
   const handlePostUserLogin = usePostUserLogin();
+  const redirectTo = useRedirectTo();
+
+  redirectTo(paths.articlesPage);
 
   return (
     <ColoredMainArea colorScheme="main">
